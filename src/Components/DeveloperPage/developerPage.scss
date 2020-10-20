@@ -1,0 +1,659 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+//
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "../util/IncludeMedia/includemedia.scss";
+
+$yellow_Color: #ffd42d;
+$white_Color: #f1f5f5;
+$black_Color: rgba(33, 33, 33, 0.9);
+$heroText__Size: 20vw;
+$blue__Color: #1544cd;
+$red__Color: #fb6542;
+$aboutHeroHeading__Color: #96ffca;
+$secondary_Yellow_Color: #fff55a;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: local("MyFont"),
+    url(../../assets/Fonts/GTWalsheimProRegularRegular/GTWalsheimProRegularRegular.ttf)
+      format("woff");
+}
+
+.bgHeadinglight {
+  font-size: 7.5rem;
+  // font-weight: 800;
+  font-family: "Fredoka One", cursive;
+  opacity: 0.05;
+  color: $white_Color;
+  pointer-events: none;
+  text-align: right;
+  padding-top: 4rem;
+  @include media("<=tablet") {
+    display: none;
+  }
+}
+
+.developerPage__Wrapper {
+  width: 100%;
+  height: 100%;
+  .developerPage__inner__Wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: $red__Color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .ScrollDownBar {
+      width: 99.9%;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      background-color: inherit;
+      .iconWrapper {
+        cursor: pointer;
+        width: 3%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    .herowrapper {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      @media only screen and (min-width: 768px) {
+        position: fixed !important;
+      }
+      .heroSection {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: calc(100vh);
+        display: flex;
+        flex-direction: column;
+        .developer__heading {
+          position: absolute !important;
+          top: 23% !important;
+          text-align: center;
+          width: 100%;
+          font-family: "Poppins", sans-serif;
+          font-size: 17vw;
+          text-shadow: 5px 65px 15px rgba(63, 107, 169, 0.1);
+          z-index: 3;
+          font-weight: 650;
+          color: $secondary_Yellow_Color;
+          @include media("<=810px") {
+            top: 30% !important;
+          }
+          // @include media("<=tablet") {
+          //   top: 30% !important;
+          // }
+          @include media("<=460px") {
+            top: 42% !important;
+          }
+        }
+        .BoyImg__Wrapper {
+          position: fixed !important;
+          top: 0;
+          left: 0;
+          width: 50vw;
+          height: 50vh;
+          z-index: 3;
+          position: absolute !important;
+          top: 33% !important;
+          left: 35% !important;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+          @include media("<=460px") {
+            top: 37% !important;
+            left: 50% !important;
+            width: 35vw;
+            height: 35vh;
+          }
+        }
+        .Dashboard__Wrapper {
+          width: 35%;
+          height: 35%;
+          position: absolute !important;
+          top: 25% !important;
+          left: 37% !important;
+          z-index: 2;
+          img {
+            width: 95%;
+            height: 95%;
+            object-fit: contain;
+          }
+        }
+        .UpperCloud__Wrapper {
+          width: 25%;
+          height: 25%;
+          position: absolute !important;
+          top: 14% !important;
+          left: 22% !important;
+          z-index: 3;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+          @include media("<=tablet") {
+            display: none !important;
+          }
+        }
+        .Chair__Wrapper {
+          width: 25%;
+          height: 25%;
+          position: absolute !important;
+          top: 55% !important;
+          left: 58% !important;
+          z-index: 3;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+          @include media("<=tablet") {
+            display: none !important;
+          }
+        }
+        .LowerCloud__Wrapper {
+          width: 15%;
+          height: 15%;
+          position: absolute !important;
+          top: 20% !important;
+          left: 61% !important;
+          z-index: 0;
+          img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+          }
+          @include media("<=tablet") {
+            display: none !important;
+          }
+        }
+        .GearImg__Wrapper {
+          width: 15%;
+          height: 15%;
+          position: absolute !important;
+          top: 60% !important;
+          left: 32% !important;
+          z-index: 3;
+          img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+          }
+          @include media("<=tablet") {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    .lowerSection {
+      width: 80%;
+      height: 100%;
+      margin-top: 60vh;
+      @include media("<=tablet") {
+        margin-top: -60vh;
+      }
+      .toolsSection {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .toolsHead {
+          font-size: 3vw;
+          font-family: "MyFont", sans-serif;
+          text-align: center;
+          font-weight: 400;
+          color: $white_Color;
+          letter-spacing: -1px;
+          @include media("<=tablet") {
+            font-size: 3.7vw;
+            letter-spacing: -0.5px;
+          }
+          @include media("<=420px") {
+            font-size: 5vw;
+            letter-spacing: -0.5px;
+          }
+        }
+        .toolsIconContainer {
+          // border: 1px solid red;
+          width: 107%;
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          .Row1,
+          .Row3 {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+          .Row2 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .middleBigIcon {
+              margin-left: 2.9rem;
+              margin-right: 2.75rem;
+              width: 7.5rem;
+              height: 7.5rem;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+              @include media("<=tablet") {
+                width: 6rem;
+                height: 6rem;
+              }
+              @include media("<=550px") {
+                width: 4rem;
+                height: 4rem;
+              }
+            }
+          }
+          .iconContainer {
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+            p {
+              font-family: "MyFont", sans-serif;
+              font-weight: 500;
+              font-size: 2.2vw;
+              margin-left: -1rem;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+            @include media("<=tablet") {
+              width: 1.85rem;
+              height: 1.85rem;
+              pointer-events: none;
+            }
+            @include media("<=550px") {
+              width: 1.25rem;
+              height: 1.25rem;
+            }
+          }
+        }
+      }
+      .toolsSection2 {
+        margin-top: 2.5rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .toolsHead {
+          font-size: 3vw;
+          font-family: "MyFont", sans-serif;
+          text-align: center;
+          font-weight: 400;
+          color: $white_Color;
+          letter-spacing: -1px;
+          @include media("<=tablet") {
+            font-size: 3.7vw;
+            letter-spacing: -0.5px;
+          }
+          @include media("<=420px") {
+            font-size: 5vw;
+            letter-spacing: -0.5px;
+          }
+        }
+        .toolsIconContainerDev {
+          width: 94.5%;
+          height: 15vh;
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: 3.5rem;
+          .iconContainer {
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+            @include media("<=tablet") {
+              width: 1.85rem;
+              height: 1.85rem;
+              pointer-events: none;
+            }
+            @include media("<=550px") {
+              width: 1.25rem;
+              height: 1.25rem;
+            }
+          }
+        }
+      }
+      .workSectionDev {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 6rem;
+        .titleHead {
+          position: relative;
+          // top: -2%;
+          font-size: 5rem;
+          font-family: "MyFont", sans-serif;
+          text-align: left;
+          font-weight: 600;
+          color: white;
+          z-index: 2000;
+          // z-index: 1000;
+          @include media("<=760px") {
+            font-size: 3rem;
+          }
+          @include media("<=550px") {
+            font-size: 1.85rem;
+          }
+        }
+        .projects {
+          width: 100%;
+          height: 100%;
+          margin-top: -3.2rem;
+          @include media("<=760px") {
+            font-size: 2rem;
+            margin-top: -1.8rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          @include media("<=550px") {
+            font-size: 2rem;
+            margin-top: -1.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .landscapeProj,
+          .movieStreamProj {
+            width: 100%;
+            height: 28vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // background-color: white;
+            border-radius: 5px;
+
+            h1 {
+              font-family: "MyFont", sans-serif;
+              font-weight: 400;
+              text-align: center;
+              font-size: 3vw;
+            }
+            .imgWrapper {
+              z-index: 700;
+              width: 100%;
+              height: 100%;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            transition: all 0.3s ease;
+            &:hover {
+              opacity: 0.8;
+              cursor: pointer;
+            }
+          }
+          .movieStreamProj {
+            border: 2px solid #6e7bd7;
+            box-shadow: -0px -0px 5px 1px #6e7bd7;
+          }
+          .coviddesign {
+            // box-shadow: ;
+            // border: 2px solid rgb(100, 49, 49);
+            box-shadow: -0px -0px 5px 1px rgb(100, 49, 49);
+            height: 28vw;
+            width: 100%;
+            .imgWrapper {
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+
+              img {
+                object-fit: cover;
+              }
+            }
+            h1 {
+              position: absolute !important;
+              top: 40%;
+              z-index: 4;
+              color: white;
+            }
+            transition: all 0.5s ease;
+            &:hover {
+              opacity: 0.8;
+              cursor: pointer;
+            }
+          }
+          .twoProjs {
+            width: 100%;
+            height: 28vw;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.6rem;
+            margin-bottom: 0.5rem;
+            @include media("<=550px") {
+              height: 60vw;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+            .leftProj {
+              box-shadow: -0px -0px 5px 1px #ccd8f5;
+            }
+            .rightProj {
+              @include media("<=tablet") {
+                margin-bottom: 0.25rem !important;
+              }
+              box-shadow: -0px -0px 5px 1px #5d34ff;
+            }
+            .leftProj,
+            .rightProj {
+              width: 49.5%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              border-radius: 5px;
+              @include media("<=550px") {
+                width: 100%;
+                height: 28vw;
+              }
+              .imgWrapper {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              .titleHead {
+                width: 80%;
+                font-family: "MyFont", sans-serif;
+                font-weight: 400;
+                font-size: 3vw;
+                text-align: center;
+                position: relative;
+                top: 3%;
+                z-index: 1;
+                color: black;
+              }
+              transition: all 0.3s ease;
+              &:hover {
+                opacity: 0.8;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/////////////////////////////
+.iconContainer .tooltip {
+  width: 7rem;
+  text-align: center;
+  position: absolute !important;
+  top: 0;
+  left: -125% !important;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-family: "Poppins", sans-serif;
+}
+.iconContainer:hover .tooltip {
+  position: absolute;
+  left: -123% !important;
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.iconContainer .tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: black;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.iconContainer:hover .tooltip {
+  color: white;
+  background-color: black;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+/////////////////////////////////////////
+.iconContainer .react-tooltip {
+  width: 7rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-family: "MyFont", sans-serif;
+  position: absolute;
+  left: 3%;
+}
+.iconContainer:hover .react-tooltip {
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.iconContainer .react-tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: black;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.iconContainer:hover .react-tooltip {
+  color: white;
+  background-color: black;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+/////////////////////////////////////////
+
+.iconContainer .gsap-tooltip {
+  width: 7rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-family: "MyFont", sans-serif;
+  position: absolute;
+  left: -130% !important;
+}
+.iconContainer:hover .gsap-tooltip {
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.iconContainer .gsap-tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: black;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.iconContainer:hover .gsap-tooltip {
+  color: white;
+  background-color: black;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}

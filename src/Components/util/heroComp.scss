@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "../util/IncludeMedia/includemedia.scss";
+
+$yellow_Color: #ffd42d;
+$white_Color: #f1f5f5;
+$black_Color: rgba(7, 5, 5, 0.9);
+$heroText__Size: 20vw;
+$blue__Color: #1544cd;
+$red__Color: #fb6542;
+$aboutHeroHeading__Color: #96ffca;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero__wrapper {
+  height: calc(100vh);
+  @media only screen and (min-width: 768px) {
+    position: fixed !important;
+  }
+  // position: fixed;
+}
+.bgHeadingdark {
+  font-size: 11.7vw;
+  font-family: "Fredoka One", cursive;
+  opacity: 0.12;
+  color: $white_Color;
+  pointer-events: none;
+  text-align: left;
+  padding-top: 4rem;
+  line-height: 1.4;
+  @include media("<=tablet") {
+    display: none;
+    font-size: 10.7vw;
+  }
+}
+
+.bgHeadinglight {
+  font-size: 11.7vw;
+  font-family: "Fredoka One", cursive;
+  color: $white_Color;
+  pointer-events: none;
+  text-align: right;
+  padding-top: 4rem;
+  line-height: 1.4;
+  opacity: 0.12;
+  @media only screen and (max-width: 1024px) {
+    font-size: 10.7vw;
+    @include media("<=tablet") {
+      display: none;
+    }
+  }
+}
+
+//about
+
+.hero__Section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .hello__heading,
+  .design__heading {
+    position: relative !important;
+    top: 18% !important;
+    left: 1% !important;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    h1 {
+      color: $aboutHeroHeading__Color;
+      font-family: "Poppins", sans-serif;
+      font-size: 22vw;
+      text-shadow: 5px 65px 15px rgba(63, 107, 169, 0.1);
+      font-weight: 650;
+      color: $white_Color;
+    }
+    // @include media("<=tablet") {
+    //   // top: 40% !important;
+    // }
+  }
+  .hello__heading {
+    @include media(">tablet", "<=945px") {
+      top: 26% !important;
+    }
+    @include media("<780px") {
+      top: 30% !important;
+    }
+    @include media("<665px") {
+      top: 30% !important;
+    }
+    @include media("<650px") {
+      top: 35% !important;
+    }
+    @include media("<478px") {
+      top: 38% !important;
+    }
+    @include media("<380px") {
+      top: 40% !important;
+    }
+    @include media("<320px") {
+      top: 42% !important;
+    }
+  }
+
+  .design__heading {
+    @include media(">tablet", "<=945px") {
+      top: 26% !important;
+    }
+    @include media("<780px") {
+      top: 30% !important;
+    }
+    @include media("<665px") {
+      top: 30% !important;
+    }
+    @include media("<650px") {
+      top: 35% !important;
+    }
+    @include media("<=500px") {
+      top: 35% !important;
+    }
+    @include media("<320px") {
+      top: 40% !important;
+    }
+  }
+
+  .hello__heading {
+    @media only screen and (min-height: 800px) and (max-width: 480px) {
+      top: 45% !important;
+    }
+  }
+  @keyframes backgroundEffect {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(20px, 10px);
+    }
+    50% {
+      transform: translate(0px, 10px);
+    }
+    75% {
+      transform: translate(-10px, -20px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+  .skateBoardBoyImg__Wrapper {
+    width: 95%;
+    height: 95%;
+    position: absolute !important;
+    top: 5% !important;
+    left: 0% !important;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    @include media("<=tablet") {
+      animation-name: backgroundEffect;
+      animation-duration: 30s;
+      animation-iteration-count: infinite;
+    }
+  }
+  .designPage__Wrapper {
+    width: 95%;
+    height: 95%;
+    position: absolute !important;
+    top: -5% !important;
+    left: 0% !important;
+    @include media("<=tablet") {
+      animation-name: backgroundEffect;
+      animation-duration: 30s;
+      animation-iteration-count: infinite;
+    }
+  }
+}

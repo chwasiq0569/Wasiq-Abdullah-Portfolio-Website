@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "../util/IncludeMedia/includemedia.scss";
+
+$yellow_Color: #ffd42d;
+$white_Color: #f1f5f5;
+$black_Color: rgba(219, 177, 177, 0.9);
+$heroText__Size: 20vw;
+$blue__Color: #1544cd;
+$red__Color: #fb6542;
+$aboutHeroHeading__Color: #96ffca;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MyFont";
+  src: local("MyFont"),
+    url(../../assets/Fonts/GTWalsheimProRegularRegular/GTWalsheimProRegularRegular.ttf)
+      format("woff");
+}
+
+.contactPopUp__Wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  font-family: "Poppins", sans-serif;
+  .contactPopUp__InnerWrapper {
+    z-index: 2000;
+    width: 96%;
+    height: 94%;
+    background-color: #f8fafa;
+    .lowerSection {
+      position: absolute;
+      top: 78%;
+      width: 96%;
+      height: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 5000;
+      p {
+        font-size: 1.2vw;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        margin-top: -2rem;
+        @include media("<=tablet") {
+          font-size: 2vw;
+        }
+      }
+      .icons {
+        width: 35%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .iconContainer {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          a,
+          a:hover,
+          a:focus,
+          a:active {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+          text-decoration: none;
+          color: inherit;
+        }
+        @include media("<=550px") {
+          width: 30%;
+        }
+        @include media("<=tablet") {
+          width: 35%;
+          .iconContainer:nth-child(4) {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    .innerDiv {
+      background-color: white;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(0 0, 100% 0, 100% 40%, 0 90%);
+      .topSection {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        .crossIcon {
+          cursor: pointer;
+        }
+      }
+      .upperSection {
+        display: flex;
+        justify-content: center;
+        // a {
+        //   text-decoration: none;
+        //   color: inherit;
+        // }
+        .Navslinks {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: -2rem;
+          .linkNav {
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            @include media("<=tablet") {
+              font-size: 0.7rem;
+            }
+          }
+          @include media("<=tablet") {
+            display: block;
+          }
+          @include media(">tablet") {
+            display: none;
+          }
+        }
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .contactInfo {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          // display: none;
+          @include media("<=tablet") {
+            display: none;
+          }
+          @include media(">tablet") {
+            display: block;
+          }
+          .contactHead {
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 1.5vw;
+            font-weight: 600;
+            font-family: "MyFont", sans-serif;
+          }
+          a {
+            font-size: 3.2vw;
+            letter-spacing: 1px;
+            cursor: pointer;
+            color: inherit;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

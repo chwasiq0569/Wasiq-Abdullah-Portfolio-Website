@@ -1,0 +1,41 @@
+$cyan: rgb(67, 231, 233);
+$red: rgb(221, 51, 52);
+
+.scene {
+  margin-top: -1.5rem;
+  height: 0;
+  left: 52%;
+  padding-top: 15.72%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  &__wrapper {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  &__image {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    &--main {
+      z-index: 2;
+    }
+    &--left {
+      fill: $cyan;
+      left: -0.35vw !important;
+      top: -0.2vw !important;
+    }
+    &--right {
+      fill: $red;
+      right: -0.35vw;
+      left: auto !important;
+      top: auto !important;
+      bottom: -0.2vw;
+    }
+  }
+}

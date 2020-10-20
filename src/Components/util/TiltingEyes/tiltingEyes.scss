@@ -1,0 +1,101 @@
+@import "../IncludeMedia/includemedia.scss";
+
+.eyes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 275px;
+  height: 100%;
+  margin: 0 auto;
+  flex-direction: row;
+  transition: all 0.2s ease-in-out;
+  background: transparent;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  @include media("<=tablet") {
+    display: none;
+  }
+  .outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    width: 120px;
+    height: 130px;
+    border-radius: 50%;
+    background-image: radial-gradient(
+      circle at center,
+      #fff 0,
+      #eee,
+      lighten(steelblue, 30%) 80%,
+      steelblue 100%
+    );
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+    animation: eyemove 10s infinite;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    .inner {
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      transform: translateZ(20px);
+      width: 50px;
+      height: 60px;
+      background-color: black;
+      border-radius: 50%;
+      animation: eyemove-inner 10s infinite;
+      overflow: hidden;
+      .shine {
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        background-color: #ccc;
+        transform: rotate(15deg);
+        width: 10px;
+        height: 20px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@keyframes eyemove {
+  0% {
+    width: 120px;
+    height: 130px;
+    overflow: hidden;
+  }
+  2% {
+    width: 125px;
+    height: 5px;
+    overflow: hidden;
+  }
+  4% {
+    width: 120px;
+    height: 130px;
+    overflow: visible;
+  }
+  100% {
+    width: 120px;
+    height: 130px;
+    overflow: visible;
+  }
+}
+
+@keyframes eyemove-inner {
+  0% {
+    width: 50px;
+    height: 60px;
+  }
+  2% {
+    width: 50px;
+    height: 2px;
+  }
+  4% {
+    width: 50px;
+    height: 60px;
+  }
+  100% {
+    width: 50px;
+    height: 60px;
+  }
+}
