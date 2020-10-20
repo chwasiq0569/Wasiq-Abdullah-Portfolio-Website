@@ -1,7 +1,4 @@
 import React,{ useEffect } from 'react';
-import Website from "../../assets/videos/websites.mp4";
-import Branding from "../../assets/videos/branding.mp4";
-import Apps from "../../assets/videos/apps.mp4";
 import "./Cursor.scss";
 
 const Cursors = () => {

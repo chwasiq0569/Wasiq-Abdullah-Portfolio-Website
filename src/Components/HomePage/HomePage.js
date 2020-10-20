@@ -1,15 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import ScrollDownImg from "../../assets/DownwardIcon.png";
-import ChartImg from "../../assets/chart_10.png";
-import WorkingBoyImg from "../../assets/recentWork.png";
 import "./HomePage.scss";
-import ICoordinateLogo from "../../assets/icoordinatewhite.png";
-import SevenEhvenLogo from "../../assets/white.png";
-import MeImg from "../../assets/Me.png";
+import ICoordinateLogo from "../../assets/Companies/icoordinatewhite.png";
+import SevenEhvenLogo from "../../assets/Companies/white.png";
 import HeroComp from "../util/HeroComp";
 import IntroSection from "../util/IntroSection";
 import Footer from "../util/Footer";
-import ArrowIcon from "../../assets/left-arrow.png";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import AOS from "aos";

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import ICoordinateLogo from "../../assets/icoordinatewhite.png";
-import SevenEhvenLogo from "../../assets/white.png";
+import ICoordinateLogo from "../../assets/Companies/icoordinatewhite.png";
+import SevenEhvenLogo from "../../assets/Companies/white.png";
 import HeroComp from "../util/HeroComp";
 import IntroSection from "../util/IntroSection";
 import Footer from "../util/Footer";
