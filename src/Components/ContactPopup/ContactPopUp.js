@@ -53,10 +53,13 @@ const ContactPopUp = React.forwardRef((props, ref) => {
             </a>
             </div>
             <div className="iconContainer">
+            <a href="https://www.linkedin.com/in/wasiq-abdullah-b515031a6/" target="_blank">
               <LinkedInlogo height="1.2rem" width="1.2rem" />
+              </a>
             </div>
             <div className="iconContainer">
-              <Instagramlogo height="1.2rem" width="1.2rem" />
+            <a href="https://www.instagram.com/wasik_daprogrammer/" target="_blank">
+              <Instagramlogo height="1.2rem" width="1.2rem" /></a>
             </div>
           </div>
         </div>

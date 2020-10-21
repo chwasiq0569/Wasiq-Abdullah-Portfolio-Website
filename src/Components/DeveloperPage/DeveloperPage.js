@@ -28,6 +28,7 @@ import ReduxIcon from "../../assets/DeveloperLanguages/redux.png";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { motion } from "framer-motion";
+import IntroSection from './../util/IntroSection';
 
 const DeveloperPage = ({ page, text, pageData }) => {
   useEffect(() => {
@@ -45,38 +46,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
         <DeveloperPageHero page={page} text={text} pageData={pageData} />
 
         <div className="lowerSection">
-          <div className="intro__Section">
-            <p
-              className="introWhite"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="400"
-            >
-              INTRO
-            </p>
-            <h3
-              className="intro__HeadlineWhite"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="500"
-            >
-              Hey! I'm 18 years old Front-End Designer & Developer who convert
-              your ideas into Reality.
-            </h3>
-            <h5
-              className="intro__DescWhite"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="600"
-            >
-              The main area of my expertise is Front-End Design & Development
-              (client side of web). I also work with wordpress. I can design and
-              develop slick, interactive, Responsive and Performance Efficient
-              Web Apps. I also have experience of creating websites on CMS like
-              Wordpress, Wix and others.
-            </h5>
-          </div>
-
+          <IntroSection page={page} pageData={pageData} />
           {/* ////////////////////////// */}
 
           <div className="toolsSection">

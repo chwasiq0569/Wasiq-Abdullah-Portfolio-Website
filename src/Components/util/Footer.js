@@ -66,21 +66,6 @@ const Footer = (props) => {
           <a href="mailto:wasiqabdullah222@gmail.com">wasiqabdullah222@gmail.com</a>
         </div>
         <div className="socialIcons">
-          {/* <div className="socialIcon__Container">
-            <a
-              href="mailto:wasiqabdullah222@gmail.com"
-              target="_blank"
-              onClick={(e) => e.preventDefault()}
-            >
-              <Email
-                height="0.9rem"
-                width="0.9rem"
-                ref={(el) => (iconEM = el)}
-                onMouseOver={() => onmouseover(iconEM)}
-                onMouseOut={() => onmouseout(iconEM)}
-              />
-            </a>
-          </div> */}
           <div className="socialIcon__Container">
             <a href="https://www.behance.net/wasiqabdullah" target="_blank">
               <Behance
@@ -115,6 +100,7 @@ const Footer = (props) => {
                </a>
           </div>
           <div className="socialIcon__Container">
+          <a href="https://www.linkedin.com/in/wasiq-abdullah-b515031a6/">
             <LinkedIn
               height="1rem"
               width="1rem"
@@ -122,8 +108,10 @@ const Footer = (props) => {
               onMouseOver={() => onmouseover(iconLI)}
               onMouseOut={() => onmouseout(iconLI)}
             />
+             </a>
           </div>
           <div className="socialIcon__Container">
+          <a href="https://www.instagram.com/wasik_daprogrammer/" target="_blank">
             <Instagram
               height="1.1rem"
               width="1.1rem"
@@ -131,6 +119,7 @@ const Footer = (props) => {
               onMouseOver={() => onmouseover(iconIG)}
               onMouseOut={() => onmouseout(iconIG)}
             />
+            </a>
           </div>
         </div>
       </div>

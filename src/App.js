@@ -52,6 +52,18 @@ function App(props) {
       introDesc:
         "The main area of my expertise is Front-End Design & Development (client side of web). I can design and develop slick, interactive, Responsive and Performance Efficient Web Apps. I also have experience of creating websites on CMS like Wordpress, Wix Website Builder and others.",
     },
+    {
+      introTitle: "DESIGN",
+      introHead: "I love to design experiences that not only complete the functional value but also loved by people.",
+      introDesc:
+        "I am a UI designer. Currently working on freelance projects and updating my portfolio. I believe great design is defined by the experience it creates for the User combined with flawless execution.I'm a designer with a keen eye for creating engaging UI, bringing products to life. "
+    },
+    {
+      introTitle: "DEVELOP",
+      introHead: "I'm an ingenious web developer oriented to the frontend, I lead and design products that people love.",
+      introDesc:
+        " I rely on the most outstanding open source libraries React & Gatsby being these my tools to be able to solve any challenge posed in my work life. I bring unique prespective of designer & developer. This means my design takes into account users as well as developer constraints allowing me to take on digital projects from multiple standpoints. " 
+    },
   ]);
   return (
     <>
@@ -68,7 +80,7 @@ function App(props) {
             exact
             path="/designer"
             component={() => (
-              <DesignPage page="design" text="Design" pageData={pageData[1]} />
+              <DesignPage page="design" text="Design" pageData={pageData[2]} />
             )}
           />
           <Route
@@ -78,7 +90,7 @@ function App(props) {
               <DeveloperPage
                 page="develop"
                 text="Develop"
-                pageData={pageData[1]}
+                pageData={pageData[3]}
               />
             )}
           /> 
