@@ -70,6 +70,10 @@ $bgColor: #e7eeed;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include media("<=tablet") {
+          margin-top: -5rem;
+          margin-bottom: 10rem;
+        }
         .toolsHead {
           font-size: 3vw;
           font-family: "MyFont", sans-serif;
@@ -78,7 +82,6 @@ $bgColor: #e7eeed;
           color: $black_Color !important;
           letter-spacing: -1px;
           @include media("<=tablet") {
-            margin-bottom: 1.5rem;
             font-size: 3.7vw;
             letter-spacing: -0.5px;
           }
@@ -238,8 +241,6 @@ $bgColor: #e7eeed;
             justify-content: space-between;
             margin-top: 0.6rem;
             margin-bottom: 0.4rem;
-            @include media("<=550px") {
-            }
 
             @include media("<=550px") {
               height: 58.7vw;
@@ -247,12 +248,7 @@ $bgColor: #e7eeed;
               flex-direction: column;
               justify-content: space-between;
             }
-            .leftProj {
-              background-color: yellow;
-            }
-            .rightProj {
-              background-color: #fc8164;
-            }
+
             .leftProj,
             .rightProj {
               width: 49.5%;
@@ -288,6 +284,22 @@ $bgColor: #e7eeed;
               &:hover {
                 opacity: 0.8;
                 cursor: pointer;
+              }
+            }
+            .leftProj {
+              background-color: yellow;
+            }
+            .rightProj {
+              background-color: #fc8164;
+              .imgWrapper {
+                position: relative;
+                width: 3.5rem;
+                height: 3.5rem;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                }
               }
             }
           }

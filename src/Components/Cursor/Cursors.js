@@ -14,7 +14,7 @@ const Cursors = () => {
 // },[])
 
     return (<div className="cursor">
-    <div class="cursor-media">
+    <div className="cursor-media">
    
     </div> 
   </div>);

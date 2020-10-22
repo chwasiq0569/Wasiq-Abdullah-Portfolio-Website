@@ -14,6 +14,7 @@ import "./designPage.scss";
 import Footer from "../util/Footer";
 import { motion } from "framer-motion";
 import DesignPageHero from "./DesignPageHero";
+import CartImg from "../../assets/DesignProj/icons8-fast-cart-64.png"
 
 const DesignPage = ({ page, text, pageData }) => {
   useEffect(() => {
@@ -39,13 +40,7 @@ const DesignPage = ({ page, text, pageData }) => {
       transition={{ duration: 2, ease: "easeIn" }}
     >
       <div className="designPage__inner__Wrapper">
-        {/* <HeroComp page={page} text={text} /> */}
         <DesignPageHero page={page} text={text} />
-        {/* <div className="ScrollDownBar">
-          <div className="iconWrapper">
-            <img src={ScrollDownImg} alt="ScrollDownImg" />
-          </div>
-        </div> */}
         <div className="lowerSection">
           <IntroSection page={page} pageData={pageData} />
           <div className="toolsSection">
@@ -140,6 +135,9 @@ const DesignPage = ({ page, text, pageData }) => {
                   onClick={() => window.open("https://www.behance.net/gallery/106317571/Ecommerce-Website","_blank")}
                 >
                   <h1 className="titleHead">Ecommerce Wesite Design</h1>
+                  <div className="imgWrapper">
+                    <img src={CartImg} alt="CartImg" />
+                  </div>
                 </div>
               </div>
               <div

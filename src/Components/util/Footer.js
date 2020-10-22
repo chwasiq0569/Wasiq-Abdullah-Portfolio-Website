@@ -100,7 +100,7 @@ const Footer = (props) => {
                </a>
           </div>
           <div className="socialIcon__Container">
-          <a href="https://www.linkedin.com/in/wasiq-abdullah-b515031a6/">
+          <a href="https://www.linkedin.com/in/wasiq-abdullah-b515031a6/" target="_blank">
             <LinkedIn
               height="1rem"
               width="1rem"

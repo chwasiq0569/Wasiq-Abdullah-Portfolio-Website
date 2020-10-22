@@ -12,8 +12,6 @@ import WebPack from "../../assets/devtools/icons8-webpack-512.png";
 import TiltingEyes from "./../util/TiltingEyes/TiltingEyes";
 //projects
 import CovidTrackerImg from "../../assets/DeveloperProj/CovidTracker2.png";
-import VirtualChatRoomImg from "../../assets/DeveloperProj/VirtualChatRoom.png";
-import EcommerceApp from "../../assets/DeveloperProj/EcommerceApp.png";
 import MovieStreamApp from "../../assets/DeveloperProj/MovieStreamApp.jpg";
 import HTMLIcon from "../../assets/DeveloperLanguages/html5.png";
 import CSSIcon from "../../assets/DeveloperLanguages/css.png";
@@ -29,6 +27,8 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { motion } from "framer-motion";
 import IntroSection from './../util/IntroSection';
+import CartImg from "../../assets/DesignProj/icons8-fast-cart-64.png";
+import ChatRoomIcon from "../../assets/DeveloperProj/icons8-chat-room-100.png";
 
 const DeveloperPage = ({ page, text, pageData }) => {
   useEffect(() => {
@@ -252,7 +252,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
                     Chat Room App
                   </h1>
                   <div className="imgWrapper">
-                    <img src={VirtualChatRoomImg} alt="SkatedboardBoy" />
+                    <img src={ChatRoomIcon} alt="ChatRoomIcon" />
                   </div>
                 </div>
                 <div
@@ -264,7 +264,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
                 >
                   <h1 className="titleHead">Ecommerce App</h1>
                   <div className="imgWrapper">
-                    <img src={EcommerceApp} alt="SkatedboardBoy" />
+                    <img src={CartImg} alt="CartImg" />
                   </div>
                 </div>
               </div>
