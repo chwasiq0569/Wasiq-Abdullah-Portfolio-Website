@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This Project is buld using React-JS, GSAP, Framer-Motion, node-sass, Parallax-JS and some npm packages.
 
-[Click to See Deployed Site](https://wasiq-abdullah-portfolio.web.app/)
+[Click to See Deployed Site](https://wasiq-abdullah-portfolio.web.app/){:target="_blank"}
 
 Link for Deployed Site : 
 
