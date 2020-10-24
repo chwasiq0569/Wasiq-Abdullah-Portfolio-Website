@@ -238,7 +238,6 @@ $secondary_Yellow_Color: #fff55a;
           }
         }
         .toolsIconContainer {
-          // border: 1px solid red;
           width: 107%;
           height: 50vh;
           display: flex;
@@ -306,13 +305,17 @@ $secondary_Yellow_Color: #fff55a;
         }
       }
       .toolsSection2 {
-        margin-top: 7rem;
-        margin-bottom: 7rem;
+        margin-top: 7rem !important;
+        margin-bottom: 7rem !important;
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include media("<=tablet") {
+          margin-top: 2rem !important;
+          margin-bottom: 4rem !important;
+        }
         .toolsHead {
           font-size: 3vw;
           font-family: "MyFont", sans-serif;
@@ -335,6 +338,10 @@ $secondary_Yellow_Color: #fff55a;
           display: flex;
           justify-content: space-evenly;
           margin-top: 5rem;
+          @include media("<=tablet") {
+            height: 6vh;
+            margin-top: 2rem;
+          }
           .iconContainer {
             cursor: pointer;
             width: 2rem;
