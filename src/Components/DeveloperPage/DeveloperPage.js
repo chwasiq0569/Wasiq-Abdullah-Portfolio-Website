@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import DeveloperPageHero from "./DeveloperPageHero";
 import "../util/introSection.scss";
 import Footer from "./../util/Footer";
-import ScrollDownImg from "../../assets/DownwardIcon.png";
 import VsCode from "../../assets/devtools/visualStudio.png";
 import Github from "../../assets/devtools/github.png";
 import Postman from "../../assets/devtools/icons8-postman-api-128.png";

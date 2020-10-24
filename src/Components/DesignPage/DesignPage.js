@@ -52,7 +52,7 @@ const DesignPage = ({ page, text, pageData }) => {
             >
               Tools I Use as UI/UX Designer
             </h1>
-            <TiltingEyes />
+            {/* <TiltingEyes /> */}
             <div className="toolsIconContainer">
               <div
                 className="iconContainer"
