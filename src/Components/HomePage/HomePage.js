@@ -24,6 +24,8 @@ const HomePage = (props) => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
     AOS.init();

@@ -151,6 +151,10 @@ $secondary_Yellow_Color: #fff55a;
         flex-direction: column;
         align-items: center;
         padding-bottom: 2rem;
+        @include media(">tablet") {
+          margin-top: 2rem;
+          margin-bottom: 4rem !important;
+        }
         .tileHead {
           width: 100%;
           display: flex;
@@ -325,8 +329,6 @@ $secondary_Yellow_Color: #fff55a;
 
 .hero__Section {
   overflow: hidden;
-  // margin-top: 5rem;
-  // position: fixed !important;
   .about__heading {
     position: relative !important;
     top: 22% !important;
