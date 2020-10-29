@@ -1,14 +1,12 @@
 import firebase from "firebase";
-
-
 const firebaseConfig = {
-  apiKey: "AIzaSyB5GmGuLWhoyCEhTzt3CcYLMWWCw1PIULE",
-  authDomain: "wasiqabdullah-b1cad.firebaseapp.com",
-  databaseURL: "https://wasiqabdullah-b1cad.firebaseio.com",
-  projectId: "wasiqabdullah-b1cad",
-  storageBucket: "wasiqabdullah-b1cad.appspot.com",
-  messagingSenderId: "991780436069",
-  appId: "1:991780436069:web:60d8bac6398893ae6dee8c"
+  apiKey: "AIzaSyAgNo123fxc6K3kXz0Bl9GXsPdksnNwxGc",
+  authDomain: "wasiqabdullah-portfolio.firebaseapp.com",
+  databaseURL: "https://wasiqabdullah-portfolio.firebaseio.com",
+  projectId: "wasiqabdullah-portfolio",
+  storageBucket: "wasiqabdullah-portfolio.appspot.com",
+  messagingSenderId: "105695011561",
+  appId: "1:105695011561:web:be1ceaf61cb2c1b1904678"
 };
 
 const fire = firebase.initializeApp(firebaseConfig);
