@@ -243,6 +243,9 @@ $secondary_Yellow_Color: #fff55a;
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
+          @include media("<=tablet") {
+            height: 50vh;
+          }
           .Row1,
           .Row3 {
             width: 100%;
@@ -257,6 +260,7 @@ $secondary_Yellow_Color: #fff55a;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+
             .middleBigIcon {
               margin-left: 2.9rem;
               margin-right: 2.75rem;
