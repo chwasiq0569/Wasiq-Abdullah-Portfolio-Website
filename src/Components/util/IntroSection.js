@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./introSection.scss";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
+import "aos/dist/aos.css";
 const IntroSection = ({ page, pageData }) => {
   useEffect(() => {
     AOS.init();
