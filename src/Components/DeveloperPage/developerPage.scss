@@ -232,6 +232,7 @@ $secondary_Yellow_Color: #fff55a;
           @include media("<=tablet") {
             font-size: 3.7vw;
             letter-spacing: -0.5px;
+            margin-top: -3.5rem;
           }
           @include media("<=420px") {
             font-size: 5vw;
@@ -318,7 +319,7 @@ $secondary_Yellow_Color: #fff55a;
         flex-direction: column;
         align-items: center;
         @include media("<=tablet") {
-          margin-top: 2rem !important;
+          margin-top: 5rem !important;
           margin-bottom: 4rem !important;
         }
         .toolsHead {
