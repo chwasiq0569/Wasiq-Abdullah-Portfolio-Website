@@ -25,7 +25,7 @@ import ReduxIcon from "../../assets/DeveloperLanguages/redux.png";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { motion } from "framer-motion";
-import IntroSection from './../util/IntroSection';
+import IntroSection from "./../util/IntroSection";
 import CartImg from "../../assets/DesignProj/icons8-fast-cart-64.png";
 import ChatRoomIcon from "../../assets/DeveloperProj/icons8-chat-room-100.png";
 
@@ -233,23 +233,31 @@ const DeveloperPage = ({ page, text, pageData }) => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="400"
-                onClick={() => window.open("https://coronavirustracker-2bc65.web.app/","_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://coronavirustracker-2bc65.web.app/",
+                    "_blank"
+                  )
+                }
               >
                 <div className="imgWrapper">
                   <img src={CovidTrackerImg} alt="AirHuaracheImg" />
                 </div>
               </div>
               <div className="twoProjs">
-                <div 
+                <div
                   className="leftProj"
                   data-aos="fade-right"
                   data-aos-delay="300"
                   data-aos-duration="700"
-                  onClick={() => window.open("https://social-networking-app-38daf.web.app/","_blank")}
+                  onClick={() =>
+                    window.open(
+                      "https://social-networking-app-38daf.web.app/",
+                      "_blank"
+                    )
+                  }
                 >
-                  <h1 className="titleHead portfoliodesign">
-                    Chat Room App
-                  </h1>
+                  <h1 className="titleHead portfoliodesign">Chat Room App</h1>
                   <div className="imgWrapper">
                     <img src={ChatRoomIcon} alt="ChatRoomIcon" />
                   </div>
@@ -259,7 +267,12 @@ const DeveloperPage = ({ page, text, pageData }) => {
                   data-aos="fade-left"
                   data-aos-delay="300"
                   data-aos-duration="700"
-                  onClick={() => window.open("https://ecommerce-app-553b9.web.app/","_blank")}
+                  onClick={() =>
+                    window.open(
+                      "https://ecommerce-app-553b9.web.app/",
+                      "_blank"
+                    )
+                  }
                 >
                   <h1 className="titleHead">Ecommerce App</h1>
                   <div className="imgWrapper">
@@ -273,7 +286,9 @@ const DeveloperPage = ({ page, text, pageData }) => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="750"
-                onClick={() => window.open("https://streamproject-4ce54.web.app/","_blank")}
+                onClick={() =>
+                  window.open("https://streamproject-4ce54.web.app/", "_blank")
+                }
               >
                 <h1 className="titleHead">Stream App</h1>
                 <div className="imgWrapper">
