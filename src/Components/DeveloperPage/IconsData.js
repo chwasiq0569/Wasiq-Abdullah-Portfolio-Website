@@ -34,31 +34,26 @@ export const row1 = [
     text: "CSS3",
     Icon: CSSIcon,
     innerClass: "tooltip",
-
     altText: "CSS Icon",
   },
   {
     className: "iconContainer",
-
     data: "zoom-in",
     delay: "250",
     duration: "700",
     text: "Javascript",
     Icon: JSIcon,
     innerClass: "tooltip",
-
     altText: "Javascript Icon",
   },
   {
     className: "iconContainer",
-
     data: "zoom-in",
     delay: "300",
     duration: "700",
     text: "Wordpress",
     Icon: WordpressIcon,
     innerClass: "tooltip",
-
     altText: "Wordpress Icon",
   },
 ];
@@ -88,14 +83,12 @@ export const row2 = [
 export const row3 = [
   {
     className: "iconContainer",
-
     data: "zoom-in",
     delay: "500",
     duration: "700",
     text: "NodeJS",
     Icon: NodeJSIcon,
     innerClass: "tooltip",
-
     altText: "NodeJS Icon",
   },
   {
@@ -107,31 +100,26 @@ export const row3 = [
     text: "Java",
     Icon: JavaIcon,
     innerClass: "tooltip",
-
     altText: "Java Icon",
   },
   {
     className: "iconContainer",
-
     data: "zoom-in",
     delay: "600",
     duration: "700",
     text: "Sass",
     Icon: SassIcon,
     innerClass: "tooltip",
-
     altText: "Sass Icon",
   },
   {
     className: "iconContainer",
-
     data: "zoom-in",
     delay: "650",
     duration: "700",
     text: "Redux",
     Icon: ReduxIcon,
     innerClass: "tooltip",
-
     altText: "Redux Icon",
   },
 ];
@@ -151,21 +139,21 @@ export const toolsIcons = [
     className: "iconContainer",
     innerClass: "tooltip",
     data: "zoom-in",
-    delay: "1200",
-    duration: "1000",
-    text: "Webpack",
-    Icon: WebPack,
-    altText: "WebPack Icon",
-  },
-  {
-    className: "iconContainer",
-    innerClass: "tooltip",
-    data: "zoom-in",
     delay: "1000",
     duration: "1000",
     text: "Postman",
     Icon: Postman,
     altText: "Postman Icon",
+  },
+  {
+    className: "iconContainer",
+    innerClass: "tooltip",
+    data: "zoom-in",
+    delay: "1200",
+    duration: "1000",
+    text: "Webpack",
+    Icon: WebPack,
+    altText: "WebPack Icon",
   },
   {
     className: "iconContainer",
