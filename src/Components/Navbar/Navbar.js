@@ -63,13 +63,11 @@ const Navbar = (props) => {
         duration: 0.5,
       });
     }
-
-
-
   }, [verticalOffset]);
 
   const changeRoute = (route) => {
     window.scrollTo(0, 0);
+    document.body.style.overflow = "hidden";
     props.history.push({
       pathname: route,
     });
@@ -101,8 +99,6 @@ const Navbar = (props) => {
       document.body.style.overflowY = "scroll";
     }
   };
-
-  
 
   return (
     <div className="Navbar__Wrapper">

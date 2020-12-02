@@ -8,7 +8,6 @@ import { ReactComponent as CrossIcon } from "../../assets/SVGSocialMeida/cancel.
 import { ReactComponent as GithubLogo } from "../../assets/SVGSocialMeida/github.svg";
 import { Link, withRouter } from "react-router-dom";
 const ContactPopUp = React.forwardRef((props, ref) => {
-  
   let emailAdd = useRef(null);
   console.log("props.path: ", props.path);
   console.log("props.history: ", props.history);
@@ -27,9 +26,9 @@ const ContactPopUp = React.forwardRef((props, ref) => {
     }, 1000);
   };
 
-  const handleClick = (link) => {
-    window.open(link, "_blank");
-  }
+  // const handleClick = (link) => {
+  //   window.open(link, "_blank");
+  // }
 
   return (
     <div className="contactPopUp__Wrapper" id="contactMe" ref={ref}>
@@ -37,29 +36,36 @@ const ContactPopUp = React.forwardRef((props, ref) => {
         <div className="lowerSection">
           <p>SOCIAL</p>
           <div className="icons">
-            <div className="iconContainer" >
-            <a href="https://www.behance.net/wasiqabdullah" target="_blank">
-              <Behancelogo height="1.2rem" width="1.2rem"  />
-            </a>
-            </div>
             <div className="iconContainer">
-            <a href="https://dribbble.com/chwasiq0569" target="_blank">
-              <Dribblelogo height="0.9rem" width="0.9rem" />
-            </a>
-            </div>
-            <div className="iconContainer">
-            <a href="https://github.com/chwasiq0569" target="_blank">
-              <GithubLogo height="0.9rem" width="0.9rem" />
-            </a>
-            </div>
-            <div className="iconContainer">
-            <a href="https://www.linkedin.com/in/wasiq-abdullah-b515031a6/" target="_blank">
-              <LinkedInlogo height="1.2rem" width="1.2rem" />
+              <a href="https://www.behance.net/wasiqabdullah" target="_blank">
+                <Behancelogo height="1.2rem" width="1.2rem" />
               </a>
             </div>
             <div className="iconContainer">
-            <a href="https://www.instagram.com/wasik_daprogrammer/" target="_blank">
-              <Instagramlogo height="1.2rem" width="1.2rem" /></a>
+              <a href="https://dribbble.com/chwasiq0569" target="_blank">
+                <Dribblelogo height="0.9rem" width="0.9rem" />
+              </a>
+            </div>
+            <div className="iconContainer">
+              <a href="https://github.com/chwasiq0569" target="_blank">
+                <GithubLogo height="0.9rem" width="0.9rem" />
+              </a>
+            </div>
+            <div className="iconContainer">
+              <a
+                href="https://www.linkedin.com/in/wasiq-abdullah-b515031a6/"
+                target="_blank"
+              >
+                <LinkedInlogo height="1.2rem" width="1.2rem" />
+              </a>
+            </div>
+            <div className="iconContainer">
+              <a
+                href="https://www.instagram.com/wasik_daprogrammer/"
+                target="_blank"
+              >
+                <Instagramlogo height="1.2rem" width="1.2rem" />
+              </a>
             </div>
           </div>
         </div>
@@ -75,7 +81,8 @@ const ContactPopUp = React.forwardRef((props, ref) => {
           <div className="upperSection">
             <div className="contactInfo">
               <p className="contactHead">CONTACT</p>
-              <a href="mailto:wasiqabdullah222@gmail.com" 
+              <a
+                href="mailto:wasiqabdullah222@gmail.com"
                 ref={(el) => (emailAdd = el)}
                 onMouseOver={() =>
                   props.path === "/" || props.path === "/designer"
@@ -87,7 +94,7 @@ const ContactPopUp = React.forwardRef((props, ref) => {
                 onMouseOut={() => onmouseout(emailAdd)}
               >
                 wasiqabdullah222@gmail.com
-                </a>
+              </a>
             </div>
             {/* //// */}
             <div className="Navslinks">

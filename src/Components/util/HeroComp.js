@@ -10,7 +10,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { withRouter } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 const HeroComp = (props) => {
-  console.log("hsitory.location.pathname: ",props.history.location.pathname);
+  console.log("hsitory.location.pathname: ", props.history.location.pathname);
+  // here parallax effect is disabled on tablets and mobile devices
   const dontAnimate = useMediaQuery({
     query: "(max-device-width: 760px)",
   });
@@ -18,7 +19,7 @@ const HeroComp = (props) => {
   let heroTxt = useRef(null);
   let textBg = useRef(null);
   var scrollPos;
-  const { page, text, pageData } = props;
+  const { page, text } = props;
   useEffect(() => {
     console.log("dontAnimate: ", dontAnimate);
     if (typeof window !== "undefined") {
@@ -60,7 +61,7 @@ const HeroComp = (props) => {
     const parallax = new Parallax(scene, {
       relativeInput: true,
     });
-    parallax.friction(0.010, 0.020);
+    parallax.friction(0.01, 0.02);
     return () => {
       parallax.disable();
     };
@@ -69,32 +70,35 @@ const HeroComp = (props) => {
     <div className="hero__wrapper">
       <h1
         className={
-          props.history.location.pathname === "/" ||
-          props.history.location.pathname === "/design"
+          page === "home" || page === "about"
             ? "bgHeadingdark"
             : "bgHeadinglight"
+          // props.history.location.pathname === "/" ||
+          // props.history.location.pathname === "/design"
+          //   ? "bgHeadingdark"
+          //   : "bgHeadinglight"
         }
         ref={(el) => (textBg = el)}
       >
         DO WHAT YOU LOVE & ACHIEVE YOUR DREAMS.
       </h1>
       <ul className="hero__Section" id="scene" data-clip-relative-input="true">
-        <li 
-          className="hello__heading layer"
-          data-depth="-0.10"
-        >
-          <h1 id="heroTxt" ref={(el) => (dontAnimate ? heroTxt = null : heroTxt = el)}>
+        <li className="hello__heading layer" data-depth="-0.10">
+          <h1
+            id="heroTxt"
+            ref={(el) => (dontAnimate ? (heroTxt = null) : (heroTxt = el))}
+          >
             {text}
           </h1>
         </li>
-          <li className="skateBoardBoyImg__Wrapper layer" data-depth="0.50">
-            <img
-              id="myImg"
-              ref={(el) => (dontAnimate ? img = null : img = el)}
-              src={SkateBoardBoy}
-              alt="SkateBoardBoy"
-            />
-          </li>
+        <li className="skateBoardBoyImg__Wrapper layer" data-depth="0.50">
+          <img
+            id="myImg"
+            ref={(el) => (dontAnimate ? (img = null) : (img = el))}
+            src={SkateBoardBoy}
+            alt="SkateBoardBoy"
+          />
+        </li>
       </ul>
     </div>
   );

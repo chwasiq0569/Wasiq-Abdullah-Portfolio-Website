@@ -32,6 +32,7 @@ import ChatRoomIcon from "../../assets/DeveloperProj/icons8-chat-room-100.png";
 const DeveloperPage = ({ page, text, pageData }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.body.style.overflowY = "scroll";
   }, []);
   return (
     <motion.div

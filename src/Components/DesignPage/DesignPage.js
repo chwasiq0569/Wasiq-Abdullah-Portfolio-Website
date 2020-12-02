@@ -14,11 +14,12 @@ import "./designPage.scss";
 import Footer from "../util/Footer";
 import { motion } from "framer-motion";
 import DesignPageHero from "./DesignPageHero";
-import CartImg from "../../assets/DesignProj/icons8-fast-cart-64.png"
+import CartImg from "../../assets/DesignProj/icons8-fast-cart-64.png";
 
 const DesignPage = ({ page, text, pageData }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.body.style.overflowY = "scroll";
   }, []);
 
   const pageTransition = {
@@ -100,14 +101,21 @@ const DesignPage = ({ page, text, pageData }) => {
           <div className="workSection">
             <h1 className="title_Head">Work</h1>
             <div className="projects">
-              <div className="landscapeProj" onClick={() => window.open("https://www.behance.net/gallery/104309977/Nike-Air-Huarache-Page-Design","_blank")}>
+              <div
+                className="landscapeProj"
+                onClick={() =>
+                  window.open(
+                    "https://www.behance.net/gallery/104309977/Nike-Air-Huarache-Page-Design",
+                    "_blank"
+                  )
+                }
+              >
                 <h1>Air Huarache Page Design</h1>
                 <div
                   className="imgWrapper"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="400"
-
                 >
                   <img src={AirHuaracheImg} alt="AirHuaracheImg" />
                 </div>
@@ -118,7 +126,12 @@ const DesignPage = ({ page, text, pageData }) => {
                   data-aos="fade-right"
                   data-aos-delay="300"
                   data-aos-duration="700"
-                  onClick={() => window.open("https://www.behance.net/gallery/104309477/Front-End-Developer-Portfolio-UI","_blank")}
+                  onClick={() =>
+                    window.open(
+                      "https://www.behance.net/gallery/104309477/Front-End-Developer-Portfolio-UI",
+                      "_blank"
+                    )
+                  }
                 >
                   <h1 className="titleHead portfoliodesign">
                     Portfolio Design
@@ -132,7 +145,12 @@ const DesignPage = ({ page, text, pageData }) => {
                   data-aos="fade-left"
                   data-aos-delay="300"
                   data-aos-duration="700"
-                  onClick={() => window.open("https://www.behance.net/gallery/106317571/Ecommerce-Website","_blank")}
+                  onClick={() =>
+                    window.open(
+                      "https://www.behance.net/gallery/106317571/Ecommerce-Website",
+                      "_blank"
+                    )
+                  }
                 >
                   <h1 className="titleHead">Ecommerce Wesite Design</h1>
                   <div className="imgWrapper">
@@ -145,7 +163,12 @@ const DesignPage = ({ page, text, pageData }) => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="650"
-                onClick={() => window.open("https://www.behance.net/gallery/104338651/Nike-Airmax-Page-Design","_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://www.behance.net/gallery/104338651/Nike-Airmax-Page-Design",
+                    "_blank"
+                  )
+                }
               >
                 <h1>Nike Airmax Page Design</h1>
                 <div className="imgWrapper">
@@ -157,7 +180,12 @@ const DesignPage = ({ page, text, pageData }) => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="750"
-                onClick={() => window.open("https://www.behance.net/gallery/104342443/Corona-Virus-Tracker-Web-App-Design","_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://www.behance.net/gallery/104342443/Corona-Virus-Tracker-Web-App-Design",
+                    "_blank"
+                  )
+                }
               >
                 <div className="imgWrapper">
                   <img src={CovidTracker} alt="CovidTracker" />

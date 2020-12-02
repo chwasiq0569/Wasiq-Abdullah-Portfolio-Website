@@ -25,9 +25,9 @@ const HomePage = (props) => {
     },
   };
 
-
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.body.style.overflowY = "scroll";
     AOS.init();
     if (typeof window !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
@@ -36,11 +36,15 @@ const HomePage = (props) => {
 
   const changeRoute = (route) => {
     window.scrollTo(0, 0);
+    document.body.style.overflow = "hidden";
+
+    //before pushing it will wait 600ms
+    // props.history.push(route);
     setTimeout(() => props.history.push(route), 600);
   };
 
   return (
-    // <Scrollbar>
+    //motion.div is used for route transition
     <motion.div
       className={page === "home" ? "homePage__Wrapper" : "aboutPage__Wrapper"}
       initial={{ opacity: 0 }}
@@ -142,7 +146,7 @@ const HomePage = (props) => {
                 >
                   <ul>
                     <li>
-                      I wanna become Full-Stack Developer and to become an
+                      I want to become Full-Stack Developer and to become an
                       expert in JavaScript.
                     </li>
                     <li>
@@ -174,7 +178,6 @@ const HomePage = (props) => {
       </div>
       <Footer />
     </motion.div>
-    // </Scrollbar>
   );
 };
 

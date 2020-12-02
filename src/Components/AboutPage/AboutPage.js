@@ -15,14 +15,13 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
 
-
 const AboutPage = (props) => {
   const meGif = useMediaQuery({
     query: "(max-device-width: 768px)",
   });
 
-
   const { page, text, pageData } = props;
+  //used to render lottie animations
   const defaultOptionsRandom = {
     loop: true,
     autoplay: true,
@@ -34,11 +33,13 @@ const AboutPage = (props) => {
 
   const changeRoute = (route) => {
     window.scrollTo(0, 0);
+    document.body.style.overflow = "hidden";
     setTimeout(() => props.history.push(route), 600);
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.body.style.overflowY = "scroll";
     AOS.init();
     if (typeof window !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
@@ -126,8 +127,8 @@ const AboutPage = (props) => {
               >
                 <ul>
                   <li>
-                    - I want to become Full-Stack Developer and expert
-                    in JavaScript.
+                    - I want to become Full-Stack Developer and expert in
+                    JavaScript.
                   </li>
                   <li>
                     - To Learn enough continuous integration to successfully
@@ -146,7 +147,7 @@ const AboutPage = (props) => {
                 data-aos-duration="700"
               >
                 <Lottie
-                  width={ meGif ? 275 : 350}
+                  width={meGif ? 275 : 350}
                   height={meGif ? 300 : 400}
                   options={defaultOptionsRandom}
                 />
