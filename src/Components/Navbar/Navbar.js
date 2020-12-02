@@ -206,11 +206,7 @@ const Navbar = (props) => {
           animateIt={animateIt}
           path={props.history.location.pathname}
         /> */}
-        <ChildWithRouteAndRef
-          ref={contactRef}
-          animateIt={animateIt}
-          path={props.history.location.pathname}
-        />
+        <ChildWithRouteAndRef ref={contactRef} animateIt={animateIt} />
       </div>
     </div>
   );

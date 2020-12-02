@@ -9,8 +9,8 @@ import { ReactComponent as GithubLogo } from "../../assets/SVGSocialMeida/github
 import { Link, withRouter } from "react-router-dom";
 const ContactPopUp = React.forwardRef((props, ref) => {
   let emailAdd = useRef(null);
-  console.log("props.path: ", props.path);
-  console.log("props.history: ", props.history);
+  // console.log("props.path: ", props.path);
+  // console.log("props.history: ", props.history);
   const onmouseover = (elem, color) => {
     elem.style.color = color;
   };
@@ -84,10 +84,12 @@ const ContactPopUp = React.forwardRef((props, ref) => {
               <a
                 href="mailto:wasiqabdullah222@gmail.com"
                 ref={(el) => (emailAdd = el)}
+                //changing color of email on mouseover
                 onMouseOver={() =>
-                  props.path === "/" || props.path === "/designer"
+                  props.history.location.pathname === "/" ||
+                  props.history.location.pathname === "/designer"
                     ? onmouseover(emailAdd, "#ffd42d")
-                    : props.path === "/developer"
+                    : props.history.location.pathname === "/developer"
                     ? onmouseover(emailAdd, "#fb6542")
                     : onmouseover(emailAdd, "#1544cd")
                 }
@@ -96,7 +98,7 @@ const ContactPopUp = React.forwardRef((props, ref) => {
                 wasiqabdullah222@gmail.com
               </a>
             </div>
-            {/* //// */}
+            {/* below code will render for mobile and tablet devices as navbar  */}
             <div className="Navslinks">
               <p className="linkNav" onClick={() => changeRoute("/")}>
                 INTRO
@@ -120,16 +122,30 @@ const ContactPopUp = React.forwardRef((props, ref) => {
 
 // export default ContactPopUp;
 
+// here we need withRouter (an Higher Order Component) that passes the  closest route match to our component
+//  by help of this we will be able to access location and history objects
+
 const withRouterForwardRef = (Component) => {
+  //here i wrapped my withRouter Component inside withRouter HOC
   const WithRouter = withRouter(({ forwardedRef, ...props }) => (
+    //here forwardedRef contains actual ref and ...props contains actual props and props that we recieve from withRouter HOC i.e location, history
+
+    //these props are passed to withRouter component below inside forwardRef Component
+
     <Component ref={forwardedRef} {...props} />
   ));
 
+  //Ref forwarding is a technique for automatically passing a ref through a component to one of its children.
+
+  //and here we need Ref in ContactPopUp Component to do animations
+
   return forwardRef((props, ref) => (
+    //here refs are passed to withRouter
     <WithRouter {...props} forwardedRef={ref} />
   ));
 };
 
-const ChildWithRouteAndRef = withRouterForwardRef(ContactPopUp);
+export default withRouterForwardRef(ContactPopUp);
+// const ChildWithRouteAndRef = withRouterForwardRef(ContactPopUp);
 
-export default ChildWithRouteAndRef;
+// export default ChildWithRouteAndRef;
