@@ -23,8 +23,7 @@ function App(props) {
       ease: "Power3.easeInOut",
     });
     let cursor = new Cursor(document.getElementsByClassName("cursor")[0]);
-  }
- 
+  };
 
   if (
     props.history.location.pathname === "/" ||
@@ -54,24 +53,26 @@ function App(props) {
     },
     {
       introTitle: "DESIGN",
-      introHead: "I love to design experiences that not only complete the functional value but also loved by people.",
+      introHead:
+        "I love to design experiences that not only complete the functional value but also loved by people.",
       introDesc:
-        "I am a UI designer. Currently working on freelance projects and updating my portfolio. I believe great design is defined by the experience it creates for the User combined with flawless execution. I'm a designer with a keen eye for creating engaging UI, bringing products to life. "
+        "I am a UI designer. Currently working on freelance projects and updating my portfolio. I believe great design is defined by the experience it creates for the User combined with flawless execution. I'm a designer with a keen eye for creating engaging UI, bringing products to life. ",
     },
     {
       introTitle: "DEVELOP",
-      introHead: "I'm an ingenious web developer oriented to the frontend, I lead and design products that people love.",
+      introHead:
+        "I'm an ingenious web developer oriented to the frontend, I lead and design products that people love.",
       introDesc:
-        " I rely on the most outstanding open source libraries React & Redux being these my tools to be able to solve any challenge posed in my work life. I bring unique prespective of designer & developer. This means my design takes into account users as well as developer constraints allowing me to take on digital projects from multiple standpoints. " 
+        " I rely on the most outstanding open source libraries React & Redux being these my tools to be able to solve any challenge posed in my work life. I bring unique prespective of designer & developer. This means my design takes into account users as well as developer constraints allowing me to take on digital projects from multiple standpoints. ",
     },
   ]);
   return (
     <>
-    <Cursors />
-     <Navbar /> 
+      <Cursors />
+      <Navbar />
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-        <Route
+          <Route
             exact
             path="/about"
             component={() => <AboutPage text="Who" pageData={pageData[1]} />}
@@ -93,16 +94,16 @@ function App(props) {
                 pageData={pageData[3]}
               />
             )}
-          /> 
+          />
           <Route
             exact
             path="/"
             component={() => (
               <HomePage page="home" text="Hello!" pageData={pageData[0]} />
             )}
-          /> 
+          />
         </Switch>
-      </AnimatePresence>  
+      </AnimatePresence>
     </>
   );
 }

@@ -13,6 +13,7 @@ import MeAnim from "../../assets/MeIcon.json";
 import Lottie from "react-lottie";
 import { withRouter } from "react-router-dom";
 import { motion } from "framer-motion";
+import { changeRouteOne } from "../util/utils";
 
 const HomePage = (props) => {
   const { page, text, pageData } = props;
@@ -34,14 +35,14 @@ const HomePage = (props) => {
     }
   }, []);
 
-  const changeRoute = (route) => {
-    window.scrollTo(0, 0);
-    document.body.style.overflow = "hidden";
+  // const changeRouteOne = (route) => {
+  //   window.scrollTo(0, 0);
+  //   document.body.style.overflow = "hidden";
 
-    //before pushing it will wait 600ms
-    // props.history.push(route);
-    setTimeout(() => props.history.push(route), 600);
-  };
+  //   //before pushing it will wait 600ms
+  //   // props.history.push(route);
+  //   setTimeout(() => props.history.push(route), 600);
+  // };
 
   return (
     //motion.div is used for route transition
@@ -70,38 +71,38 @@ const HomePage = (props) => {
               <div className="container">
                 <div
                   className="btn btn-border-4"
-                  onClick={() => changeRoute("/about")}
+                  onClick={() => changeRouteOne("/about", 600, props)}
                 >
                   ABOUT ME
                 </div>
               </div>
             </div>
-          ) : (
-            <div className="moreAboutMe__Section">
-              <h1 className="aboutMe__Text">My Portfolios</h1>
-              <div className="portfolioBoxes">
-                <div
-                  className="leftBox"
-                  data-aos="fade-down"
-                  data-aos-duration="500"
-                  data-aos-delay="300"
-                  onClick={() => changeRoute("/designer")}
-                >
-                  Designer
-                </div>
-                <div
-                  className="rightBox"
-                  data-aos="fade-up"
-                  data-aos-duration="500"
-                  data-aos-delay="300"
-                  onClick={() => changeRoute("/developer")}
-                >
-                  Developer
-                </div>
-              </div>
-            </div>
-          )}
-          {page === "about" ? (
+          ) : null
+          // <div className="moreAboutMe__Section">
+          //   <h1 className="aboutMe__Text">My Portfolios</h1>
+          //   <div className="portfolioBoxes">
+          //     <div
+          //       className="leftBox"
+          //       data-aos="fade-down"
+          //       data-aos-duration="500"
+          //       data-aos-delay="300"
+          //       onClick={() => changeRouteOne("/designer", 600, props)}
+          //     >
+          //       Designer
+          //     </div>
+          //     <div
+          //       className="rightBox"
+          //       data-aos="fade-up"
+          //       data-aos-duration="500"
+          //       data-aos-delay="300"
+          //       onClick={() => changeRouteOne("/developer", 600, props)}
+          //     >
+          //       Developer
+          //     </div>
+          //   </div>
+          // </div>
+          }
+          {/* {page === "about" ? (
             <div className="workedWith__Section">
               <div className="tileHead">
                 <h1>I Worked For</h1>
@@ -173,7 +174,7 @@ const HomePage = (props) => {
                 </div>
               </div>
             </div>
-          ) : null}
+          ) : null} */}
         </div>
       </div>
       <Footer />

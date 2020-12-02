@@ -87,6 +87,7 @@ const Navbar = (props) => {
   );
   tl.reversed(false);
   const animateIt = () => {
+    //animate on click contact
     if (willScroll) {
       window.scrollTo(0, 0);
     }
