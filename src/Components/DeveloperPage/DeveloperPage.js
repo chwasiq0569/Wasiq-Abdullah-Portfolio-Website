@@ -28,12 +28,180 @@ import { motion } from "framer-motion";
 import IntroSection from "./../util/IntroSection";
 import CartImg from "../../assets/DesignProj/icons8-fast-cart-64.png";
 import ChatRoomIcon from "../../assets/DeveloperProj/icons8-chat-room-100.png";
+import IconContainer from "./IconContainer";
 
 const DeveloperPage = ({ page, text, pageData }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.style.overflowY = "scroll";
   }, []);
+
+  const row1 = [
+    {
+      className: "iconContainer",
+      data: "zoom-in",
+      delay: "150",
+      duration: "700",
+      text: "HTML5",
+      Icon: HTMLIcon,
+      innerClass: "tooltip",
+
+      altText: "HTML Icon",
+    },
+    {
+      className: "iconContainer",
+
+      data: "zoom-in",
+      delay: "200",
+      duration: "700",
+      text: "CSS3",
+      Icon: CSSIcon,
+      innerClass: "tooltip",
+
+      altText: "CSS Icon",
+    },
+    {
+      className: "iconContainer",
+
+      data: "zoom-in",
+      delay: "250",
+      duration: "700",
+      text: "Javascript",
+      Icon: JSIcon,
+      innerClass: "tooltip",
+
+      altText: "Javascript Icon",
+    },
+    {
+      className: "iconContainer",
+
+      data: "zoom-in",
+      delay: "300",
+      duration: "700",
+      text: "Wordpress",
+      Icon: WordpressIcon,
+      innerClass: "tooltip",
+
+      altText: "Wordpress Icon",
+    },
+  ];
+  const row2 = [
+    {
+      className: "iconContainer",
+      data: "zoom-in",
+      delay: "350",
+      duration: "700",
+      text: "Bootstrap",
+      Icon: BootstrapIcon,
+      innerClass: "tooltip",
+      altText: "Bootstrap Icon",
+    },
+    {
+      className: "iconContainer middleBigIcon",
+      data: "zoom-in",
+      delay: "400",
+      duration: "700",
+      text: "React-JS",
+      Icon: ReactIcon,
+      innerClass: "react-tooltip",
+      altText: "React Icon",
+    },
+  ];
+
+  const row3 = [
+    {
+      className: "iconContainer",
+
+      data: "zoom-in",
+      delay: "500",
+      duration: "700",
+      text: "NodeJS",
+      Icon: NodeJSIcon,
+      innerClass: "tooltip",
+
+      altText: "NodeJS Icon",
+    },
+    {
+      className: "iconContainer",
+
+      data: "zoom-in",
+      delay: "550",
+      duration: "700",
+      text: "Java",
+      Icon: JavaIcon,
+      innerClass: "tooltip",
+
+      altText: "Java Icon",
+    },
+    {
+      className: "iconContainer",
+
+      data: "zoom-in",
+      delay: "600",
+      duration: "700",
+      text: "Sass",
+      Icon: SassIcon,
+      innerClass: "tooltip",
+
+      altText: "Sass Icon",
+    },
+    {
+      className: "iconContainer",
+
+      data: "zoom-in",
+      delay: "650",
+      duration: "700",
+      text: "Redux",
+      Icon: ReduxIcon,
+      innerClass: "tooltip",
+
+      altText: "Redux Icon",
+    },
+  ];
+
+  const toolsIcons = [
+    {
+      className: "iconContainer",
+      innerClass: "tooltip",
+      data: "zoom-in",
+      delay: "600",
+      duration: "1000",
+      text: "VS-CODE",
+      Icon: VsCode,
+      altText: "VS-CODE Icon",
+    },
+    {
+      className: "iconContainer",
+      innerClass: "tooltip",
+      data: "zoom-in",
+      delay: "1200",
+      duration: "1000",
+      text: "Webpack",
+      Icon: WebPack,
+      altText: "WebPack Icon",
+    },
+    {
+      className: "iconContainer",
+      innerClass: "tooltip",
+      data: "zoom-in",
+      delay: "1000",
+      duration: "1000",
+      text: "Postman",
+      Icon: Postman,
+      altText: "Postman Icon",
+    },
+    {
+      className: "iconContainer",
+      innerClass: "tooltip",
+      data: "zoom-in",
+      delay: "1400",
+      duration: "1000",
+      text: "NPM",
+      Icon: Npm,
+      altText: "NPM Icon",
+    },
+  ];
+
   return (
     <motion.div
       className="developerPage__Wrapper"
@@ -61,110 +229,55 @@ const DeveloperPage = ({ page, text, pageData }) => {
             <TiltingEyes />
             <div className="toolsIconContainer">
               <div className="Row1">
-                <div
-                  className="iconContainer"
-                  data-aos="zoom-in"
-                  data-aos-delay="150"
-                  data-aos-duration="700"
-                >
-                  <div className="tooltip">HTML5</div>
-                  <img src={HTMLIcon} alt="FramerIcon" />
-                </div>
-                <div
-                  className="iconContainer"
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                  data-aos-duration="700"
-                >
-                  <div className="tooltip">CSS3</div>
-                  <img src={CSSIcon} alt="IllustratorIcon" />
-                </div>
-                <div
-                  className="iconContainer"
-                  data-aos="zoom-in"
-                  data-aos-delay="250"
-                  data-aos-duration="700"
-                >
-                  <div className="tooltip">Javascript</div>
-                  <img src={JSIcon} alt="PhotoShopIcon" />
-                </div>
-                <div
-                  className="iconContainer"
-                  data-aos="zoom-in"
-                  data-aos-delay="300"
-                  data-aos-duration="700"
-                >
-                  <div className="tooltip">Wordpress</div>
-                  <img src={WordpressIcon} alt="XdIcon" />
-                </div>
+                {row1.map((r) => (
+                  <IconContainer
+                    className={r.className}
+                    data={r.data}
+                    delay={r.delay}
+                    duration={r.duration}
+                    text={r.text}
+                    Icon={r.Icon}
+                    altText={r.altText}
+                    innerClass={r.innerClass}
+                  />
+                ))}
               </div>
               <div className="Row2">
-                <div
-                  className="iconContainer"
-                  data-aos="zoom-in"
-                  data-aos-delay="350"
-                  data-aos-duration="700"
-                >
-                  <div className="tooltip">Bootstrap</div>
-                  <img src={BootstrapIcon} alt="FramerIcon" />
-                </div>
-                <div
-                  className="iconContainer middleBigIcon"
-                  data-aos="zoom-in"
-                  data-aos-delay="400"
-                  data-aos-duration="700"
-                >
-                  <div className="react-tooltip">React-JS</div>
-                  <img src={ReactIcon} alt="XdIcon" />
-                </div>
+                {row2.map((r) => (
+                  <IconContainer
+                    className={r.className}
+                    data={r.data}
+                    delay={r.delay}
+                    duration={r.duration}
+                    text={r.text}
+                    Icon={r.Icon}
+                    altText={r.altText}
+                    innerClass={r.innerClass}
+                  />
+                ))}
                 <div
                   className="iconContainer"
                   data-aos="zoom-in"
                   data-aos-delay="450"
                   data-aos-duration="700"
                 >
-                  {/* <img src={NodeJSIcon} alt="FigmaIcon" /> */}
                   <div className="gsap-tooltip">GSAP</div>
                   <p>GSAP</p>
                 </div>
               </div>
               <div className="Row3">
-                <div
-                  className="iconContainer"
-                  data-aos="zoom-in"
-                  data-aos-delay="500"
-                  data-aos-duration="700"
-                >
-                  <div className="tooltip">NodeJS</div>
-                  <img src={NodeJSIcon} alt="FramerIcon" />
-                </div>
-                <div
-                  className="iconContainer"
-                  data-aos="zoom-in"
-                  data-aos-delay="550"
-                  data-aos-duration="700"
-                >
-                  <div className="tooltip">Java</div>
-                  <img src={JavaIcon} alt="IllustratorIcon" />
-                </div>
-                <div
-                  className="iconContainer"
-                  data-aos="zoom-in"
-                  data-aos-delay="600"
-                  data-aos-duration="700"
-                >
-                  <div className="tooltip">Sass</div>
-                  <img src={SassIcon} alt="PhotoShopIcon" />
-                </div>
-                <div
-                  className="iconContainer"
-                  data-aos="zoom-in"
-                  data-aos-delay="650"
-                  data-aos-duration="700"
-                >
-                  <div className="tooltip">Redux</div>
-                  <img src={ReduxIcon} alt="XdIcon" />
-                </div>
+                {row3.map((r) => (
+                  <IconContainer
+                    className={r.className}
+                    data={r.data}
+                    delay={r.delay}
+                    duration={r.duration}
+                    text={r.text}
+                    Icon={r.Icon}
+                    altText={r.altText}
+                    innerClass={r.innerClass}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -178,51 +291,18 @@ const DeveloperPage = ({ page, text, pageData }) => {
               Tools I Use as Developer
             </h1>
             <div className="toolsIconContainerDev">
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="600"
-                data-aos-duration="1000"
-              >
-                <div className="tooltip">VS-CODE</div>
-                <img src={VsCode} alt="VsCode" />
-              </div>
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="800"
-                data-aos-duration="1000"
-              >
-                <div className="tooltip">Webpack</div>
-                <img src={WebPack} alt="WebPack" />
-              </div>
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="1000"
-                data-aos-duration="1000"
-              >
-                <div className="tooltip">Postman</div>
-                <img src={Postman} alt="Postman" />
-              </div>
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="1200"
-                data-aos-duration="1000"
-              >
-                <div className="tooltip">Github</div>
-                <img src={Github} alt="Github" />
-              </div>
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="1400"
-                data-aos-duration="1000"
-              >
-                <div className="tooltip">NPM</div>
-                <img src={Npm} alt="Npm" />
-              </div>
+              {toolsIcons.map((t) => (
+                <IconContainer
+                  className={t.className}
+                  data={t.data}
+                  delay={t.delay}
+                  duration={t.duration}
+                  text={t.text}
+                  Icon={t.Icon}
+                  altText={t.altText}
+                  innerClass={t.innerClass}
+                />
+              ))}
             </div>
           </div>
 

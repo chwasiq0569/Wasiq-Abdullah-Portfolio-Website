@@ -14,12 +14,9 @@ const Navbar = (props) => {
   const willScroll = useMediaQuery({
     query: "(max-device-width: 760px)",
   });
-  // console.log("props.history.location: ", props.history.location.pathname);
   const [hideMe, setHideMe] = useState(true);
   const contactRef = useRef(null);
-  // console.log(props.history.location.pathname);
   const [verticalOffset, setVerticalOffset] = useState(0);
-  // console.log(verticalOffset.y);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -86,18 +83,18 @@ const Navbar = (props) => {
     }
   );
   tl.reversed(false);
+
   const animateIt = () => {
     //animate on click contact
-    if (willScroll) {
-      window.scrollTo(0, 0);
-    }
     tl.reversed(!tl.reversed());
     if (hideMe === true) {
-      setHideMe(!hideMe);
       document.body.style.overflow = "hidden";
+      setHideMe(!hideMe);
     } else {
-      setTimeout(() => setHideMe(!hideMe), 1000);
-      document.body.style.overflowY = "scroll";
+      setTimeout(() => {
+        setHideMe(!hideMe);
+        document.body.style.overflowY = "scroll";
+      }, 1000);
     }
   };
 
@@ -171,7 +168,10 @@ const Navbar = (props) => {
             width="1.5rem"
             id="svgMenu"
             onClick={() => {
-              animateIt();
+              if (willScroll) {
+                window.scrollTo(0, 0);
+                setTimeout(animateIt, 500);
+              }
             }}
           />
           <Arrow
@@ -198,15 +198,11 @@ const Navbar = (props) => {
           />
         </div>
       </div>
+      {/* show and hide contact Component on Click*/}
       <div
         className={hideMe ? "hide" : ""}
         style={{ position: "absolute", top: "0", left: 0 }}
       >
-        {/* <ContactPopUp
-          ref={contactRef}
-          animateIt={animateIt}
-          path={props.history.location.pathname}
-        /> */}
         <ChildWithRouteAndRef ref={contactRef} animateIt={animateIt} />
       </div>
     </div>

@@ -86,6 +86,7 @@ const Footer = (props) => {
         <div className="socialIcons">
           {data.map((d) => (
             <SocialIcon
+              key={d.href}
               SVGComponent={d.SVGComponent}
               href={d.href}
               height={d.height}

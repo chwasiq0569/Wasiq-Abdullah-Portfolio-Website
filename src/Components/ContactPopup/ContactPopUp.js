@@ -26,10 +26,6 @@ const ContactPopUp = React.forwardRef((props, ref) => {
     }, 1000);
   };
 
-  // const handleClick = (link) => {
-  //   window.open(link, "_blank");
-  // }
-
   return (
     <div className="contactPopUp__Wrapper" id="contactMe" ref={ref}>
       <div className="contactPopUp__InnerWrapper">
