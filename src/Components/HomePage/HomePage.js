@@ -35,15 +35,6 @@ const HomePage = (props) => {
     }
   }, []);
 
-  // const changeRouteOne = (route) => {
-  //   window.scrollTo(0, 0);
-  //   document.body.style.overflow = "hidden";
-
-  //   //before pushing it will wait 600ms
-  //   // props.history.push(route);
-  //   setTimeout(() => props.history.push(route), 600);
-  // };
-
   return (
     //motion.div is used for route transition
     <motion.div
@@ -77,104 +68,7 @@ const HomePage = (props) => {
                 </div>
               </div>
             </div>
-          ) : null
-          // <div className="moreAboutMe__Section">
-          //   <h1 className="aboutMe__Text">My Portfolios</h1>
-          //   <div className="portfolioBoxes">
-          //     <div
-          //       className="leftBox"
-          //       data-aos="fade-down"
-          //       data-aos-duration="500"
-          //       data-aos-delay="300"
-          //       onClick={() => changeRouteOne("/designer", 600, props)}
-          //     >
-          //       Designer
-          //     </div>
-          //     <div
-          //       className="rightBox"
-          //       data-aos="fade-up"
-          //       data-aos-duration="500"
-          //       data-aos-delay="300"
-          //       onClick={() => changeRouteOne("/developer", 600, props)}
-          //     >
-          //       Developer
-          //     </div>
-          //   </div>
-          // </div>
-          }
-          {/* {page === "about" ? (
-            <div className="workedWith__Section">
-              <div className="tileHead">
-                <h1>I Worked For</h1>
-              </div>
-              <div className="brandsLogos">
-                <div
-                  className="brandsImg__Container"
-                  data-aos="zoom-in"
-                  data-aos-delay="300"
-                >
-                  <img src={ICoordinateLogo} alt="ICoordinateLogo" />
-                </div>
-                <div
-                  className="brandsName__Container"
-                  data-aos="zoom-in"
-                  data-aos-delay="500"
-                >
-                  <h1>iMotion Studios.</h1>
-                </div>
-                <div
-                  className="brandsImg2__Container"
-                  data-aos="zoom-in"
-                  data-aos-delay="700"
-                >
-                  <img src={SevenEhvenLogo} alt="SevenEhvenLogo" />
-                </div>
-              </div>
-            </div>
           ) : null}
-          {page === "about" ? (
-            <div className="futureGoals__Section">
-              <div className="futureHead">
-                <h1>Future Goals</h1>
-              </div>
-              <div className="boxes">
-                {" "}
-                <div
-                  className="leftSide"
-                  data-aos="fade-right"
-                  data-aos-delay="300"
-                  data-aos-duration="700"
-                >
-                  <ul>
-                    <li>
-                      I want to become Full-Stack Developer and to become an
-                      expert in JavaScript.
-                    </li>
-                    <li>
-                      To Learn enough continuous integration to successfully
-                      deploy such a solution in support of a client project.
-                    </li>
-                    <li>
-                      To build a startup, kind of sass app that will help other
-                      programmers to solve their daily life problem.
-                    </li>
-                  </ul>
-                </div>
-                <div
-                  className="rightSide"
-                  data-aos="fade-left"
-                  data-aos-delay="300"
-                  data-aos-duration="700"
-                >
-                  <Lottie
-                    width={350}
-                    height={400}
-                    options={defaultOptionsRandom}
-                  />
-                </div>
-              </div>
-            </div>
-          ) : null} */}
         </div>
       </div>
       <Footer />
