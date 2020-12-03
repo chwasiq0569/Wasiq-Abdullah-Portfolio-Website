@@ -104,6 +104,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
               <div className="Row1">
                 {row1.map((r) => (
                   <IconContainer
+                    key={r.Icon}
                     className={r.className}
                     data={r.data}
                     delay={r.delay}
@@ -118,6 +119,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
               <div className="Row2">
                 {row2.map((r) => (
                   <IconContainer
+                    key={r.Icon}
                     className={r.className}
                     data={r.data}
                     delay={r.delay}
@@ -141,6 +143,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
               <div className="Row3">
                 {row3.map((r) => (
                   <IconContainer
+                    key={r.Icon}
                     className={r.className}
                     data={r.data}
                     delay={r.delay}
@@ -166,6 +169,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
             <div className="toolsIconContainerDev">
               {toolsIcons.map((t) => (
                 <IconContainer
+                  key={t.Icon}
                   className={t.className}
                   data={t.data}
                   delay={t.delay}
@@ -182,22 +186,6 @@ const DeveloperPage = ({ page, text, pageData }) => {
           <div className="workSectionDev">
             <h1 className="titleHead">Work</h1>
             <div className="projects">
-              {/* <div className="twoProjs">
-                {projectsData.map((pd) => (
-                  <div
-                    className={pd.className}
-                    data-aos={pd.data}
-                    data-aos-delay={pd.delay}
-                    data-aos-duration={pd.duration}
-                    onClick={() => window.open(pd.link, "_blank")}
-                  >
-                    <h1 className={pd.innerClass}>{pd.text}</h1>
-                    <div className="imgWrapper">
-                      <img src={pd.Img} alt={pd.altText} />
-                    </div>
-                  </div>
-                ))}
-              </div> */}
               <ProjectContainer
                 className={projectsData[0].className}
                 data={projectsData[0].data}
