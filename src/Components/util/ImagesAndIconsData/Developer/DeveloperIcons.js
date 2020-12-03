@@ -12,7 +12,6 @@ import VsCode from "../../../../assets/devtools/visualStudio.png";
 import Github from "../../../../assets/devtools/github.png";
 import Postman from "../../../../assets/devtools/icons8-postman-api-128.png";
 import Npm from "../../../../assets/devtools/npm.png";
-import WebPack from "../../../../assets/devtools/icons8-webpack-512.png";
 export const row1 = [
   {
     className: "iconContainer",
@@ -149,9 +148,9 @@ export const toolsIcons = [
     data: "zoom-in",
     delay: "1200",
     duration: "1000",
-    text: "Webpack",
-    Icon: WebPack,
-    altText: "WebPack Icon",
+    text: "Github",
+    Icon: Github,
+    altText: "Github Icon",
   },
   {
     className: "iconContainer",
