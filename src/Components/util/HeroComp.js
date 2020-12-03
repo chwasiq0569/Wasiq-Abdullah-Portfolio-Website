@@ -73,7 +73,7 @@ const HeroComp = (props) => {
         }
         ref={(el) => (textBg = el)}
       >
-        DO WHAT YOU LOVE & ACHIEVE YOUR DREAMS.
+        DO WHAT YOU LOVE & ACHIEVE YOUR GOALS.{" "}
       </h1>
       <ul className="hero__Section" id="scene" data-clip-relative-input="true">
         <li className="hello__heading layer" data-depth="-0.10">

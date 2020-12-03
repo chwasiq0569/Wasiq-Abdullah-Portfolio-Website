@@ -80,7 +80,7 @@ const DeveloperPageHero = ({ page, pageData, text }) => {
   return (
     <div className="herowrapper">
       <h1 className="bgHeadinglight" ref={(el) => (textBg = el)}>
-        DO WHAT YOU LOVE & ACHIEVE YOUR DREAMS.
+        DO WHAT YOU LOVE & ACHIEVE YOUR GOALS.
       </h1>
       <ul className="heroSection" id="scene" data-clip-relative-input="true">
         <li

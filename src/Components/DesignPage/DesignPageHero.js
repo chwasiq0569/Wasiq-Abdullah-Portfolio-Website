@@ -8,7 +8,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { withRouter } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 const DesignPageHero = (props) => {
-  console.log("hsitory.location.pathname: ",props.history.location.pathname);
+  console.log("hsitory.location.pathname: ", props.history.location.pathname);
   const dontAnimate = useMediaQuery({
     query: "(max-device-width: 760px)",
   });
@@ -58,34 +58,32 @@ const DesignPageHero = (props) => {
     const parallax = new Parallax(scene, {
       relativeInput: true,
     });
-    parallax.friction(0.010, 0.020);
+    parallax.friction(0.01, 0.02);
     return () => {
       parallax.disable();
     };
   }, []);
   return (
     <div className="hero__wrapper">
-      <h1 className="bgHeadingdark"
-        ref={(el) => (textBg = el)}
-      >
-        DO WHAT YOU LOVE & ACHIEVE YOUR DREAMS.
+      <h1 className="bgHeadingdark" ref={(el) => (textBg = el)}>
+        DO WHAT YOU LOVE & ACHIEVE YOUR GOALS.
       </h1>
       <ul className="hero__Section" id="scene" data-clip-relative-input="true">
-        <li 
-          className="design__heading layer"
-          data-depth="-0.10"
-        >
-          <h1 id="heroTxt" ref={(el) => (dontAnimate ? heroTxt = null : heroTxt = el)}>
+        <li className="design__heading layer" data-depth="-0.10">
+          <h1
+            id="heroTxt"
+            ref={(el) => (dontAnimate ? (heroTxt = null) : (heroTxt = el))}
+          >
             {text}
           </h1>
         </li>
-          <div
-            ref={(el) => (dontAnimate ? img = null : img = el)}
-            className="designPage__Wrapper layer"
-            data-depth="0.30"
-          >
-            <EyeComp />
-          </div>
+        <div
+          ref={(el) => (dontAnimate ? (img = null) : (img = el))}
+          className="designPage__Wrapper layer"
+          data-depth="0.30"
+        >
+          <EyeComp />
+        </div>
       </ul>
     </div>
   );

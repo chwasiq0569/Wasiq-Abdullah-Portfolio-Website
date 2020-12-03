@@ -66,7 +66,7 @@ const AboutPageHero = (props) => {
   return (
     <div className="hero__wrapper">
       <h1 className="bgHeadinglight" ref={(el) => (textBg = el)}>
-        DO WHAT YOU LOVE & ACHIEVE YOUR DREAMS.
+        DO WHAT YOU LOVE & ACHIEVE YOUR GOALS.{" "}
       </h1>
       <ul className="hero__Section" id="scene" data-clip-relative-input="true">
         <li className="about__heading layer" data-depth="-0.10">
