@@ -1,16 +1,11 @@
 import React, { forwardRef, useRef } from "react";
 import "./contactPopUp.scss";
-import { ReactComponent as Behancelogo } from "../../assets/SVGSocialMeida/icons8-behance.svg";
-import { ReactComponent as Instagramlogo } from "../../assets/SVGSocialMeida/icons8-instagram.svg";
-import { ReactComponent as LinkedInlogo } from "../../assets/SVGSocialMeida/icons8-linkedin-2.svg";
-import { ReactComponent as Dribblelogo } from "../../assets/SVGSocialMeida/dribbble.svg";
 import { ReactComponent as CrossIcon } from "../../assets/SVGSocialMeida/cancel.svg";
-import { ReactComponent as GithubLogo } from "../../assets/SVGSocialMeida/github.svg";
 import { Link, withRouter } from "react-router-dom";
+import { data } from "./../util/FooterData/FooterData";
+import SocialIcon from "../util/SocialIcon";
 const ContactPopUp = React.forwardRef((props, ref) => {
   let emailAdd = useRef(null);
-  // console.log("props.path: ", props.path);
-  // console.log("props.history: ", props.history);
   const onmouseover = (elem, color) => {
     elem.style.color = color;
   };
@@ -26,43 +21,28 @@ const ContactPopUp = React.forwardRef((props, ref) => {
     }, 1000);
   };
 
+  const routesArr = [
+    { name: "INTRO", route: "/" },
+    { name: "ABOUT", route: "/about" },
+    { name: "DESIGNER", route: "/designer" },
+    { name: "DEVELOPER", route: "/developer" },
+  ];
+
   return (
     <div className="contactPopUp__Wrapper" id="contactMe" ref={ref}>
       <div className="contactPopUp__InnerWrapper">
         <div className="lowerSection">
           <p>SOCIAL</p>
           <div className="icons">
-            <div className="iconContainer">
-              <a href="https://www.behance.net/wasiqabdullah" target="_blank">
-                <Behancelogo height="1.2rem" width="1.2rem" />
-              </a>
-            </div>
-            <div className="iconContainer">
-              <a href="https://dribbble.com/chwasiq0569" target="_blank">
-                <Dribblelogo height="0.9rem" width="0.9rem" />
-              </a>
-            </div>
-            <div className="iconContainer">
-              <a href="https://github.com/chwasiq0569" target="_blank">
-                <GithubLogo height="0.9rem" width="0.9rem" />
-              </a>
-            </div>
-            <div className="iconContainer">
-              <a
-                href="https://www.linkedin.com/in/wasiq-abdullah-b515031a6/"
-                target="_blank"
-              >
-                <LinkedInlogo height="1.2rem" width="1.2rem" />
-              </a>
-            </div>
-            <div className="iconContainer">
-              <a
-                href="https://www.instagram.com/wasik_daprogrammer/"
-                target="_blank"
-              >
-                <Instagramlogo height="1.2rem" width="1.2rem" />
-              </a>
-            </div>
+            {data.map((d) => (
+              <SocialIcon
+                key={d.href}
+                SVGComponent={d.SVGComponent}
+                href={d.href}
+                height={d.height}
+                width={d.width}
+              />
+            ))}
           </div>
         </div>
         <div className="innerDiv">
@@ -96,18 +76,11 @@ const ContactPopUp = React.forwardRef((props, ref) => {
             </div>
             {/* below code will render for mobile and tablet devices as navbar  */}
             <div className="Navslinks">
-              <p className="linkNav" onClick={() => changeRoute("/")}>
-                INTRO
-              </p>
-              <p className="linkNav" onClick={() => changeRoute("/about")}>
-                ABOUT
-              </p>
-              <p className="linkNav" onClick={() => changeRoute("/designer")}>
-                DESIGNER
-              </p>
-              <p className="linkNav" onClick={() => changeRoute("/developer")}>
-                DEVELOPER
-              </p>
+              {routesArr.map((d) => (
+                <p className="linkNav" onClick={() => changeRoute(d.route)}>
+                  {d.name}
+                </p>
+              ))}
             </div>
           </div>
         </div>
@@ -142,6 +115,3 @@ const withRouterForwardRef = (Component) => {
 };
 
 export default withRouterForwardRef(ContactPopUp);
-// const ChildWithRouteAndRef = withRouterForwardRef(ContactPopUp);
-
-// export default ChildWithRouteAndRef;

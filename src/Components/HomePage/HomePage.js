@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./HomePage.scss";
-import ICoordinateLogo from "../../assets/Companies/icoordinatewhite.png";
-import SevenEhvenLogo from "../../assets/Companies/white.png";
 import HeroComp from "../util/HeroComp";
 import IntroSection from "../util/IntroSection";
 import Footer from "../util/Footer";
@@ -9,23 +7,12 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import MeAnim from "../../assets/MeIcon.json";
-import Lottie from "react-lottie";
 import { withRouter } from "react-router-dom";
 import { motion } from "framer-motion";
 import { changeRouteOne } from "../util/utils";
 
 const HomePage = (props) => {
   const { page, text, pageData } = props;
-  const defaultOptionsRandom = {
-    loop: true,
-    autoplay: true,
-    animationData: MeAnim,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.style.overflowY = "scroll";

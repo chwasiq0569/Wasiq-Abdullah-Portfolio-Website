@@ -1,16 +1,14 @@
 import React from "react";
 import SkateBoardBoy from "../../assets/homePage.png";
-import AboutPageBoy from "../../assets/aboutPageImg.png";
+
 import { useRef, useEffect, useState } from "react";
 import Parallax from "parallax-js"; // Now published on NPM
 import "./heroComp.scss";
-import EyeComp from "./Eye/EyeComp";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { withRouter } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 const HeroComp = (props) => {
-  console.log("hsitory.location.pathname: ", props.history.location.pathname);
   // here parallax effect is disabled on tablets and mobile devices
   const dontAnimate = useMediaQuery({
     query: "(max-device-width: 760px)",
@@ -18,7 +16,6 @@ const HeroComp = (props) => {
   let img = useRef(null);
   let heroTxt = useRef(null);
   let textBg = useRef(null);
-  var scrollPos;
   const { page, text } = props;
   useEffect(() => {
     console.log("dontAnimate: ", dontAnimate);
@@ -73,10 +70,6 @@ const HeroComp = (props) => {
           page === "home" || page === "about"
             ? "bgHeadingdark"
             : "bgHeadinglight"
-          // props.history.location.pathname === "/" ||
-          // props.history.location.pathname === "/design"
-          //   ? "bgHeadingdark"
-          //   : "bgHeadinglight"
         }
         ref={(el) => (textBg = el)}
       >
