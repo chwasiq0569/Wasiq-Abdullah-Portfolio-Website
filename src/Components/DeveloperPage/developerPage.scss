@@ -18,7 +18,9 @@ $secondary_Yellow_Color: #fff55a;
   padding: 0;
   box-sizing: border-box;
 }
-
+.hideInfo {
+  display: none;
+}
 @font-face {
   font-family: "MyFont";
   src: local("MyFont"),
