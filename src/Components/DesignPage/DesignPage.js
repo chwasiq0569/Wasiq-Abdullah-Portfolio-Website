@@ -15,6 +15,60 @@ import Footer from "../util/Footer";
 import { motion } from "framer-motion";
 import DesignPageHero from "./DesignPageHero";
 import CartImg from "../../assets/DesignProj/icons8-fast-cart-64.png";
+import IconContainer from "../DeveloperPage/IconContainer";
+
+const toolsIconContainer = [
+  {
+    className: "iconContainer",
+    data: "zoom-in",
+    delay: "150",
+    duration: "700",
+    Icon: FramerIcon,
+    text: "Framer",
+    innerClass: "tooltip",
+    altText: "Framer",
+  },
+  {
+    className: "iconContainer",
+    data: "zoom-in",
+    delay: "200",
+    duration: "700",
+    Icon: IllustratorIcon,
+    text: "Illustrator",
+    innerClass: "tooltip",
+    altText: "Illustrator Icon",
+  },
+  {
+    className: "iconContainer",
+    data: "zoom-in",
+    delay: "250",
+    duration: "700",
+    Icon: PhotoShopIcon,
+    text: "PhotoShop",
+    innerClass: "tooltip",
+    altText: "PhotoShop Icon",
+  },
+  {
+    className: "iconContainer",
+    data: "zoom-in",
+    delay: "300",
+    duration: "700",
+    Icon: XdIcon,
+    text: "Adobe XD",
+    innerClass: "tooltip",
+    altText: "Xd Icon",
+  },
+  {
+    className: "iconContainer",
+    data: "zoom-in",
+    delay: "350",
+    duration: "700",
+    Icon: FigmaIcon,
+    text: "Figma",
+    innerClass: "tooltip",
+    altText: "Figma Icon",
+  },
+];
 
 const DesignPage = ({ page, text, pageData }) => {
   useEffect(() => {
@@ -55,46 +109,18 @@ const DesignPage = ({ page, text, pageData }) => {
             </h1>
             {/* <TiltingEyes /> */}
             <div className="toolsIconContainer">
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="150"
-                data-aos-duration="700"
-              >
-                <img src={FramerIcon} alt="FramerIcon" />
-              </div>
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="200"
-                data-aos-duration="700"
-              >
-                <img src={IllustratorIcon} alt="IllustratorIcon" />
-              </div>
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="250"
-                data-aos-duration="700"
-              >
-                <img src={PhotoShopIcon} alt="PhotoShopIcon" />
-              </div>
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-                data-aos-duration="700"
-              >
-                <img src={XdIcon} alt="XdIcon" />
-              </div>
-              <div
-                className="iconContainer"
-                data-aos="zoom-in"
-                data-aos-delay="350"
-                data-aos-duration="700"
-              >
-                <img src={FigmaIcon} alt="FigmaIcon" />
-              </div>
+              {toolsIconContainer.map((t) => (
+                <IconContainer
+                  className={t.className}
+                  data={t.data}
+                  delay={t.delay}
+                  duration={t.duration}
+                  Icon={t.Icon}
+                  text={t.text}
+                  innerClass={t.innerClass}
+                  altText={t.altText}
+                />
+              ))}
             </div>
           </div>
 

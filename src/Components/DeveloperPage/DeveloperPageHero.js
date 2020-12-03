@@ -8,8 +8,6 @@ import LowerCloud from "../../assets/Developer/lowercloud.png";
 import GearImg from "../../assets/Developer/gear.png";
 import "./developerPage.scss";
 import Parallax from "parallax-js"; // Now published on NPM
-import IntroSection from "./../util/IntroSection";
-import Footer from "./../util/Footer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
@@ -19,15 +17,8 @@ const DeveloperPageHero = ({ page, pageData, text }) => {
     query: "(max-device-width: 1025px)",
   });
   const dontAnimate = useMediaQuery({
-      query: "(max-device-width: 760px)",
-    });
-  
-  // const startValue = () => {
-  //   return isHidden ? "110% center" : "80% center";
-  // };
-  // const endValue = () => {
-  //   return isHidden ? "150% center" : "80% center";
-  // };
+    query: "(max-device-width: 760px)",
+  });
 
   let refer = useRef(null);
   let img1 = useRef(null);
@@ -91,57 +82,77 @@ const DeveloperPageHero = ({ page, pageData, text }) => {
       <h1 className="bgHeadinglight" ref={(el) => (textBg = el)}>
         DO WHAT YOU LOVE & ACHIEVE YOUR DREAMS.
       </h1>
-      <ul
-        className="heroSection"
-        id="scene"
-        data-clip-relative-input="true"
-      >
+      <ul className="heroSection" id="scene" data-clip-relative-input="true">
         <li
           className="developer__heading"
-          ref={(el) => (dontAnimate ? heroTxt = null : heroTxt = el)}
+          ref={(el) => (dontAnimate ? (heroTxt = null) : (heroTxt = el))}
           data-depth="-0.07"
         >
           {text}
         </li>
         <li
-          className={dontAnimate ? "BoyImg__Wrapper layer imgg" : "BoyImg__Wrapper layer img"}
+          className={
+            dontAnimate
+              ? "BoyImg__Wrapper layer imgg"
+              : "BoyImg__Wrapper layer img"
+          }
           data-depth="-0.20"
-          ref={(el) => (dontAnimate ? img1 = null : img1 = el)}
+          ref={(el) => (dontAnimate ? (img1 = null) : (img1 = el))}
         >
           <img src={BoyImg} alt="BoyImg" />
         </li>
         <li
-          className={dontAnimate ? "Dashboard__Wrapper layer imgg" : "Dashboard__Wrapper layer img"}
+          className={
+            dontAnimate
+              ? "Dashboard__Wrapper layer imgg"
+              : "Dashboard__Wrapper layer img"
+          }
           data-depth="0.15"
-          ref={(el) => (dontAnimate ? img2 = null : img2 = el)}
+          ref={(el) => (dontAnimate ? (img2 = null) : (img2 = el))}
         >
           <img src={DashboardImg} alt="DashboardImg" />
         </li>
         <li
-          className={dontAnimate ? "UpperCloud__Wrapper layer imgg" : "UpperCloud__Wrapper layer img"}
+          className={
+            dontAnimate
+              ? "UpperCloud__Wrapper layer imgg"
+              : "UpperCloud__Wrapper layer img"
+          }
           data-depth="0.50"
-          ref={(el) => (dontAnimate ? img3 = null :  img3 = el)}
+          ref={(el) => (dontAnimate ? (img3 = null) : (img3 = el))}
         >
           <img src={UpperCloudImg} alt="UpperCloudImg" />
         </li>
         <li
-          className={dontAnimate ? "Chair__Wrapper layer imgg" : "Chair__Wrapper layer img"}
+          className={
+            dontAnimate
+              ? "Chair__Wrapper layer imgg"
+              : "Chair__Wrapper layer img"
+          }
           data-depth="-0.35"
-          ref={(el) => (dontAnimate ? img4 = null : img4= el)}
+          ref={(el) => (dontAnimate ? (img4 = null) : (img4 = el))}
         >
           <img src={ChairImg} alt="ChairImg" />
         </li>
         <li
-          className={dontAnimate ? "LowerCloud__Wrapper layer imgg" : "LowerCloud__Wrapper layer img"}
+          className={
+            dontAnimate
+              ? "LowerCloud__Wrapper layer imgg"
+              : "LowerCloud__Wrapper layer img"
+          }
           data-depth="0.35"
-          ref={(el) => (dontAnimate ? img5 = null : img5 = el)}
+          ref={(el) => (dontAnimate ? (img5 = null) : (img5 = el))}
         >
           <img src={LowerCloud} alt="LowerCloud" />
         </li>
         <li
-          className={dontAnimate ? "GearImg__Wrapper layer imgg" : "GearImg__Wrapper layer img"}
+          className={
+            dontAnimate
+              ? "GearImg__Wrapper layer imgg"
+              : "GearImg__Wrapper layer img"
+          }
           data-depth="-0.70"
-          ref={(el) => (dontAnimate ? img6 = null : img6 = el)}
+          ref={(el) => (dontAnimate ? (img6 = null) : (img6 = el))}
         >
           <img src={GearImg} alt="GearImg" />
         </li>

@@ -1,17 +1,12 @@
 import React, { useEffect } from "react";
-// import HeroComp from "../util/HeroComp";
 import DeveloperPageHero from "./DeveloperPageHero";
 import "../util/introSection.scss";
 import Footer from "./../util/Footer";
-
 import TiltingEyes from "./../util/TiltingEyes/TiltingEyes";
-//projects
-
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { motion } from "framer-motion";
 import IntroSection from "./../util/IntroSection";
-
 import IconContainer from "./IconContainer";
 import { row1, row2, row3, toolsIcons } from "./IconsData";
 import ProjectContainer from "./ProjectContainer";
