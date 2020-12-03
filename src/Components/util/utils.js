@@ -3,6 +3,5 @@ export const changeRouteOne = (route, wait, props) => {
   document.body.style.overflow = "hidden";
 
   //before pushing it will wait 600ms
-  // props.history.push(route);
   setTimeout(() => props.history.push(route), wait);
 };
