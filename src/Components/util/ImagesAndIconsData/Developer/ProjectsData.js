@@ -1,7 +1,7 @@
-import CovidTrackerImg from "../../assets/DeveloperProj/CovidTracker2.png";
-import MovieStreamApp from "../../assets/DeveloperProj/MovieStreamApp.jpg";
-import CartImg from "../../assets/DesignProj/icons8-fast-cart-64.png";
-import ChatRoomIcon from "../../assets/DeveloperProj/icons8-chat-room-100.png";
+import CovidTrackerImg from "../../../../assets/DeveloperProj/CovidTracker2.png";
+import MovieStreamApp from "../../../../assets/DeveloperProj/MovieStreamApp.jpg";
+import CartImg from "../../../../assets/DesignProj/icons8-fast-cart-64.png";
+import ChatRoomIcon from "../../../../assets/DeveloperProj/icons8-chat-room-100.png";
 
 export const projectsData = [
   {

@@ -7,10 +7,15 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { motion } from "framer-motion";
 import IntroSection from "./../util/IntroSection";
-import IconContainer from "./IconContainer";
-import { row1, row2, row3, toolsIcons } from "./IconsData";
-import ProjectContainer from "./ProjectContainer";
-import { projectsData } from "./ProjectsData";
+import IconContainer from "../util/IconContainer/IconContainer";
+import {
+  row1,
+  row2,
+  row3,
+  toolsIcons,
+} from "../util/ImagesAndIconsData/Developer/DeveloperIcons";
+import ProjectContainer from "../util/ProjectContainer.js/ProjectContainer";
+import { projectsData } from "../util/ImagesAndIconsData/Developer/ProjectsData";
 
 const DeveloperPage = ({ page, text, pageData }) => {
   useEffect(() => {

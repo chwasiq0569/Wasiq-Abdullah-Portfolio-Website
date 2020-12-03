@@ -1,18 +1,18 @@
-import HTMLIcon from "../../assets/DeveloperLanguages/html5.png";
-import CSSIcon from "../../assets/DeveloperLanguages/css.png";
-import WordpressIcon from "../../assets/DeveloperLanguages/wordpress.png";
-import JSIcon from "../../assets/DeveloperLanguages/javascript.png";
-import BootstrapIcon from "../../assets/DeveloperLanguages/bootstrap.png";
-import ReactIcon from "../../assets/DeveloperLanguages/react.png";
-import NodeJSIcon from "../../assets/DeveloperLanguages/nodejs.png";
-import JavaIcon from "../../assets/DeveloperLanguages/java.png";
-import SassIcon from "../../assets/DeveloperLanguages/sass.png";
-import ReduxIcon from "../../assets/DeveloperLanguages/redux.png";
-import VsCode from "../../assets/devtools/visualStudio.png";
-import Github from "../../assets/devtools/github.png";
-import Postman from "../../assets/devtools/icons8-postman-api-128.png";
-import Npm from "../../assets/devtools/npm.png";
-import WebPack from "../../assets/devtools/icons8-webpack-512.png";
+import HTMLIcon from "../../../../assets/DeveloperLanguages/html5.png";
+import CSSIcon from "../../../../assets/DeveloperLanguages/css.png";
+import WordpressIcon from "../../../../assets/DeveloperLanguages/wordpress.png";
+import JSIcon from "../../../../assets/DeveloperLanguages/javascript.png";
+import BootstrapIcon from "../../../../assets/DeveloperLanguages/bootstrap.png";
+import ReactIcon from "../../../../assets/DeveloperLanguages/react.png";
+import NodeJSIcon from "../../../../assets/DeveloperLanguages/nodejs.png";
+import JavaIcon from "../../../../assets/DeveloperLanguages/java.png";
+import SassIcon from "../../../../assets/DeveloperLanguages/sass.png";
+import ReduxIcon from "../../../../assets/DeveloperLanguages/redux.png";
+import VsCode from "../../../../assets/devtools/visualStudio.png";
+import Github from "../../../../assets/devtools/github.png";
+import Postman from "../../../../assets/devtools/icons8-postman-api-128.png";
+import Npm from "../../../../assets/devtools/npm.png";
+import WebPack from "../../../../assets/devtools/icons8-webpack-512.png";
 export const row1 = [
   {
     className: "iconContainer",

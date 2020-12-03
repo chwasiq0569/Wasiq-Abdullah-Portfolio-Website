@@ -15,19 +15,6 @@ const ProjectContainer = ({
   innerTextClass,
 }) => {
   return (
-    // <div
-    //   className={className}
-    //   data-aos={data}
-    //   data-aos-delay={delay}
-    //   data-aos-duration={duration}
-    //   onClick={() => window.open(link, "_blank")}
-    // >
-    //   <h1 className={innerClass}>{text}</h1>
-    //   <div className="imgWrapper">
-    //     <img src={Img} alt={altText} />
-    //   </div>
-    // </div>
-
     <div
       className={className}
       data-aos={data}
