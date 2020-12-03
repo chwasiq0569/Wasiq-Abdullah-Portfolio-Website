@@ -23,6 +23,7 @@ const AboutPageHero = (props) => {
     }
     gsap.to(textBg, {
       scrollTrigger: {
+        // markers: true,
         trigger: textBg,
         start: "40% center",
         toggleActions: "play pause reverse none",
@@ -36,19 +37,21 @@ const AboutPageHero = (props) => {
       scrollTrigger: {
         transformOrigin: "top top",
         trigger: heroTxt,
-        start: "60% center",
+        // start: "60% 40%",
+        start: "240vh 45%",
+        end: "340vh center",
         toggleActions: "play pause reverse none",
         scrub: 2.5,
       },
     });
     tl.to(heroTxt, {
       transformOrigin: "center center",
-      y: "-60vw",
+      y: "-30vw",
       opacity: 0,
       scale: "0.75",
       ease: "sine.out",
     }).to(img, {
-      scale: 0.95,
+      scale: 0.8,
       opacity: 0,
       duration: 2.5,
       ease: "power4.out",

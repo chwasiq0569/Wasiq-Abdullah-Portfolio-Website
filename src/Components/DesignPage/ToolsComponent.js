@@ -17,6 +17,7 @@ const ToolsComponent = () => {
       <div className="toolsIconContainer">
         {toolsIconContainer.map((t) => (
           <IconContainer
+            key={t.text}
             className={t.className}
             data={t.data}
             delay={t.delay}

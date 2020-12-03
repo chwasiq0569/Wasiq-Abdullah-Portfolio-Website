@@ -77,7 +77,11 @@ const ContactPopUp = React.forwardRef((props, ref) => {
             {/* below code will render for mobile and tablet devices as navbar  */}
             <div className="Navslinks">
               {routesArr.map((d) => (
-                <p className="linkNav" onClick={() => changeRoute(d.route)}>
+                <p
+                  key={d.route}
+                  className="linkNav"
+                  onClick={() => changeRoute(d.route)}
+                >
                   {d.name}
                 </p>
               ))}

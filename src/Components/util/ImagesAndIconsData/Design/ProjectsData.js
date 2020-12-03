@@ -43,7 +43,7 @@ export const projectsData = [
     link: "https://www.behance.net/gallery/106317571/Ecommerce-Website",
     Img: CartImg,
     altText: "Cart Image",
-    text: "Ecommerce Wesite Design",
+    text: "Ecommerce Website Design",
     innerClass: "imgWrapper",
     innerTextClass: "titleHead",
     innerdata: "",

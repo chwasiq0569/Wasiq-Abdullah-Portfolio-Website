@@ -81,9 +81,6 @@ $aboutHeroHeading__Color: #96ffca;
       font-weight: 650;
       color: $white_Color;
     }
-    // @include media("<=tablet") {
-    //   // top: 40% !important;
-    // }
   }
   .hello__heading {
     @include media(">tablet", "<=945px") {
@@ -108,7 +105,6 @@ $aboutHeroHeading__Color: #96ffca;
       top: 42% !important;
     }
   }
-
   .design__heading {
     @include media(">tablet", "<=945px") {
       top: 26% !important;

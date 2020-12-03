@@ -37,7 +37,9 @@ const HeroComp = (props) => {
       scrollTrigger: {
         transformOrigin: "top top",
         trigger: heroTxt,
-        start: "60% 40%",
+        // start: "60% 40%",
+        start: "240vh 45%",
+        end: "340vh center",
         toggleActions: "play pause reverse none",
         scrub: 2.5,
       },

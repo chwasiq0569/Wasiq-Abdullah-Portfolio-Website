@@ -26,6 +26,8 @@ const DesignPageHero = (props) => {
       scrollTrigger: {
         trigger: textBg,
         start: "40% center",
+        // start: "240vh 45%",
+        // end: "340vh center",
         toggleActions: "play pause reverse none",
         scrub: 1,
       },
@@ -37,14 +39,17 @@ const DesignPageHero = (props) => {
       scrollTrigger: {
         transformOrigin: "top top",
         trigger: heroTxt,
-        start: "60% 40%",
+        // start: "60% 40%",
+        start: "240vh 45%",
+        end: "340vh center",
         toggleActions: "play pause reverse none",
         scrub: 2.5,
       },
     });
     tl.to(heroTxt, {
       transformOrigin: "center center",
-      y: "-60vw",
+      // y: "-60vw",
+      y: "-30vw",
       opacity: 0,
       scale: "0.75",
       ease: "sine.out",
