@@ -19,6 +19,14 @@ $bgColor: #e7eeed;
   box-sizing: border-box;
 }
 
+.titleHead {
+  width: 80%;
+  font-family: "MyFont", sans-serif !important;
+  font-weight: 400;
+  font-size: 3vw;
+  text-align: center;
+}
+
 @font-face {
   font-family: "MyFont";
   src: local("MyFont"),

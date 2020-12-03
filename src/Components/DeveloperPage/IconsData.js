@@ -22,12 +22,10 @@ export const row1 = [
     text: "HTML5",
     Icon: HTMLIcon,
     innerClass: "tooltip",
-
     altText: "HTML Icon",
   },
   {
     className: "iconContainer",
-
     data: "zoom-in",
     delay: "200",
     duration: "700",

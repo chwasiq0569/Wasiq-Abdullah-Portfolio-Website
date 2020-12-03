@@ -121,6 +121,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
                   Icon={t.Icon}
                   altText={t.altText}
                   innerClass={t.innerClass}
+                  innerTextClass={t.innerTextClass}
                 />
               ))}
             </div>
@@ -139,6 +140,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
                 innerClass={projectsData[0].innerClass}
                 Img={projectsData[0].Img}
                 altText={projectsData[0].altText}
+                innerTextClass={projectsData[0].innerTextClass}
               />
               <div className="twoProjs">
                 <ProjectContainer
@@ -151,6 +153,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
                   Img={projectsData[1].Img}
                   altText={projectsData[1].altText}
                   text={projectsData[1].text}
+                  innerTextClass={projectsData[1].innerTextClass}
                 />
                 <ProjectContainer
                   className={projectsData[2].className}
@@ -162,6 +165,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
                   Img={projectsData[2].Img}
                   altText={projectsData[2].altText}
                   text={projectsData[2].text}
+                  innerTextClass={projectsData[2].innerTextClass}
                 />
               </div>
               <ProjectContainer
@@ -174,6 +178,7 @@ const DeveloperPage = ({ page, text, pageData }) => {
                 Img={projectsData[3].Img}
                 altText={projectsData[3].altText}
                 text={projectsData[3].text}
+                innerTextClass={projectsData[3].innerTextClass}
               />
             </div>
           </div>

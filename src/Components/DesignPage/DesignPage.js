@@ -16,6 +16,7 @@ import { motion } from "framer-motion";
 import DesignPageHero from "./DesignPageHero";
 import CartImg from "../../assets/DesignProj/icons8-fast-cart-64.png";
 import IconContainer from "../DeveloperPage/IconContainer";
+import ProjectContainer from "./../DeveloperPage/ProjectContainer";
 
 const toolsIconContainer = [
   {
@@ -67,6 +68,87 @@ const toolsIconContainer = [
     text: "Figma",
     innerClass: "tooltip",
     altText: "Figma Icon",
+  },
+];
+
+const projectsData = [
+  {
+    className: "landscapeProj",
+    data: "fade-up",
+    delay: "1000",
+    duration: "650",
+    link:
+      "https://www.behance.net/gallery/104309977/Nike-Air-Huarache-Page-Design",
+    Img: AirHuaracheImg,
+    altText: "AirHuaracheImg",
+    text: "Air Huarache Page Design",
+    innerClass: "imgWrapper",
+    innerdata: "fade-up",
+    innerduration: "1000",
+    innerdelay: "400",
+  },
+  {
+    className: "leftProj",
+    data: "fade-right",
+    delay: "300",
+    duration: "700",
+    link:
+      "https://www.behance.net/gallery/104309477/Front-End-Developer-Portfolio-UI",
+    Img: SkatedboardBoy,
+    altText: "SkatedboardBoy Image",
+    text: "Portfolio Desgin UI",
+    innerClass: "imgWrapper",
+    innerTextClass: "titleHead portfoliodesign",
+    innerdata: "",
+    innerduration: "",
+    innerdelay: "",
+  },
+  {
+    className: "rightProj",
+    data: "fade-left",
+    delay: "300",
+    duration: "700",
+    link: "https://www.behance.net/gallery/106317571/Ecommerce-Website",
+    Img: CartImg,
+    altText: "Cart Image",
+    text: "Ecommerce Wesite Design",
+    innerClass: "imgWrapper",
+    innerTextClass: "titleHead",
+    innerdata: "",
+    innerduration: "",
+    innerdelay: "",
+  },
+  {
+    className: "landscapeProj airmaxdesign",
+    data: "fade-up",
+    delay: "650",
+    duration: "1000",
+    link: "https://www.behance.net/gallery/104338651/Nike-Airmax-Page-Design",
+    Img: NikeAirmax,
+    altText: "NikeAirmax Image",
+    text: "Nike Airmax Page Design",
+    innerClass: "imgWrapper",
+    innerTextClass: "titleHead",
+    innerdata: "fade-up",
+    innerduration: "1000",
+    innerdelay: "400",
+  },
+
+  {
+    className: "landscapeProj coviddesign",
+    data: "fade-up",
+    delay: "750",
+    duration: "1000",
+    link:
+      "https://www.behance.net/gallery/104342443/Corona-Virus-Tracker-Web-App-Design",
+    Img: CovidTracker,
+    altText: "CovidTracker Image",
+    text: "",
+    innerClass: "imgWrapper",
+    innerTextClass: "",
+    innerdata: "",
+    innerduration: "",
+    innerdelay: "",
   },
 ];
 
@@ -127,96 +209,84 @@ const DesignPage = ({ page, text, pageData }) => {
           <div className="workSection">
             <h1 className="title_Head">Work</h1>
             <div className="projects">
-              <div
-                className="landscapeProj"
-                onClick={() =>
-                  window.open(
-                    "https://www.behance.net/gallery/104309977/Nike-Air-Huarache-Page-Design",
-                    "_blank"
-                  )
-                }
-              >
-                <h1>Air Huarache Page Design</h1>
-                <div
-                  className="imgWrapper"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="400"
-                >
-                  <img src={AirHuaracheImg} alt="AirHuaracheImg" />
-                </div>
-              </div>
+              <ProjectContainer
+                className={projectsData[0].className}
+                data={projectsData[0].data}
+                delay={projectsData[0].delay}
+                duration={projectsData[0].duration}
+                link={projectsData[0].link}
+                text={projectsData[0].text}
+                innerClass={projectsData[0].innerClass}
+                innerTextClass={projectsData[0].innerTextClass}
+                Img={projectsData[0].Img}
+                altText={projectsData[0].altText}
+                innerdata={projectsData[0].innerdata}
+                innerduration={projectsData[0].innerduration}
+                innerdelay={projectsData[0].innerdelay}
+              />
+
               <div className="twoProjs">
-                <div
-                  className="leftProj"
-                  data-aos="fade-right"
-                  data-aos-delay="300"
-                  data-aos-duration="700"
-                  onClick={() =>
-                    window.open(
-                      "https://www.behance.net/gallery/104309477/Front-End-Developer-Portfolio-UI",
-                      "_blank"
-                    )
-                  }
-                >
-                  <h1 className="titleHead portfoliodesign">
-                    Portfolio Design
-                  </h1>
-                  <div className="imgWrapper">
-                    <img src={SkatedboardBoy} alt="SkatedboardBoy" />
-                  </div>
-                </div>
-                <div
-                  className="rightProj"
-                  data-aos="fade-left"
-                  data-aos-delay="300"
-                  data-aos-duration="700"
-                  onClick={() =>
-                    window.open(
-                      "https://www.behance.net/gallery/106317571/Ecommerce-Website",
-                      "_blank"
-                    )
-                  }
-                >
-                  <h1 className="titleHead">Ecommerce Wesite Design</h1>
-                  <div className="imgWrapper">
-                    <img src={CartImg} alt="CartImg" />
-                  </div>
-                </div>
+                <ProjectContainer
+                  className={projectsData[1].className}
+                  data={projectsData[1].data}
+                  delay={projectsData[1].delay}
+                  duration={projectsData[1].duration}
+                  link={projectsData[1].link}
+                  text={projectsData[1].text}
+                  innerClass={projectsData[1].innerClass}
+                  innerTextClass={projectsData[1].innerTextClass}
+                  Img={projectsData[1].Img}
+                  altText={projectsData[1].altText}
+                  innerdata={projectsData[1].innerdata}
+                  innerduration={projectsData[1].innerduration}
+                  innerdelay={projectsData[1].innerdelay}
+                />
+                <ProjectContainer
+                  className={projectsData[2].className}
+                  data={projectsData[2].data}
+                  delay={projectsData[2].delay}
+                  duration={projectsData[2].duration}
+                  link={projectsData[2].link}
+                  text={projectsData[2].text}
+                  innerClass={projectsData[2].innerClass}
+                  innerTextClass={projectsData[2].innerTextClass}
+                  Img={projectsData[2].Img}
+                  altText={projectsData[2].altText}
+                  innerdata={projectsData[2].innerdata}
+                  innerduration={projectsData[2].innerduration}
+                  innerdelay={projectsData[2].innerdelay}
+                />
               </div>
-              <div
-                className="landscapeProj airmaxdesign"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="650"
-                onClick={() =>
-                  window.open(
-                    "https://www.behance.net/gallery/104338651/Nike-Airmax-Page-Design",
-                    "_blank"
-                  )
-                }
-              >
-                <h1>Nike Airmax Page Design</h1>
-                <div className="imgWrapper">
-                  <img src={NikeAirmax} alt="NikeAirmax" />
-                </div>
-              </div>
-              <div
-                className="landscapeProj coviddesign"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="750"
-                onClick={() =>
-                  window.open(
-                    "https://www.behance.net/gallery/104342443/Corona-Virus-Tracker-Web-App-Design",
-                    "_blank"
-                  )
-                }
-              >
-                <div className="imgWrapper">
-                  <img src={CovidTracker} alt="CovidTracker" />
-                </div>
-              </div>
+              <ProjectContainer
+                className={projectsData[3].className}
+                data={projectsData[3].data}
+                delay={projectsData[3].delay}
+                duration={projectsData[3].duration}
+                link={projectsData[3].link}
+                text={projectsData[3].text}
+                innerClass={projectsData[3].innerClass}
+                innerTextClass={projectsData[3].innerTextClass}
+                Img={projectsData[3].Img}
+                altText={projectsData[3].altText}
+                innerdata={projectsData[3].innerdata}
+                innerduration={projectsData[3].innerduration}
+                innerdelay={projectsData[3].innerdelay}
+              />
+              <ProjectContainer
+                className={projectsData[4].className}
+                data={projectsData[4].data}
+                delay={projectsData[4].delay}
+                duration={projectsData[4].duration}
+                link={projectsData[4].link}
+                text={projectsData[4].text}
+                innerClass={projectsData[4].innerClass}
+                innerTextClass={projectsData[4].innerTextClass}
+                Img={projectsData[4].Img}
+                altText={projectsData[4].altText}
+                innerdata={projectsData[4].innerdata}
+                innerduration={projectsData[4].innerduration}
+                innerdelay={projectsData[4].innerdelay}
+              />
             </div>
           </div>
         </div>

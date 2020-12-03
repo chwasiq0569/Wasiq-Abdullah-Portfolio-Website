@@ -9,8 +9,25 @@ const ProjectContainer = ({
   altText,
   innerClass,
   text,
+  innerdata,
+  innerduration,
+  innerdelay,
+  innerTextClass,
 }) => {
   return (
+    // <div
+    //   className={className}
+    //   data-aos={data}
+    //   data-aos-delay={delay}
+    //   data-aos-duration={duration}
+    //   onClick={() => window.open(link, "_blank")}
+    // >
+    //   <h1 className={innerClass}>{text}</h1>
+    //   <div className="imgWrapper">
+    //     <img src={Img} alt={altText} />
+    //   </div>
+    // </div>
+
     <div
       className={className}
       data-aos={data}
@@ -18,8 +35,13 @@ const ProjectContainer = ({
       data-aos-duration={duration}
       onClick={() => window.open(link, "_blank")}
     >
-      <h1 className={innerClass}>{text}</h1>
-      <div className="imgWrapper">
+      <h1 className={innerTextClass}>{text}</h1>
+      <div
+        className={innerClass}
+        data-aos={innerdata}
+        data-aos-duration={innerduration}
+        data-aos-delay={innerdelay}
+      >
         <img src={Img} alt={altText} />
       </div>
     </div>
