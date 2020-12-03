@@ -9,6 +9,7 @@ import { ReactComponent as Arrow } from "../../assets/next.svg";
 import { ReactComponent as Menu } from "../../assets/menu.svg";
 import ChildWithRouteAndRef from "../ContactPopup/ContactPopUp";
 import { useMediaQuery } from "react-responsive";
+import { changeRouteOne } from "./../util/utils";
 
 const Navbar = (props) => {
   const willScroll = useMediaQuery({
@@ -62,14 +63,6 @@ const Navbar = (props) => {
     }
   }, [verticalOffset]);
 
-  const changeRoute = (route) => {
-    window.scrollTo(0, 0);
-    document.body.style.overflow = "hidden";
-    props.history.push({
-      pathname: route,
-    });
-  };
-
   const tl = gsap.timeline();
   tl.fromTo(
     contactRef.current,
@@ -113,7 +106,7 @@ const Navbar = (props) => {
         <div className="logo">
           <div className="logo__Wrapper">
             <img
-              onClick={() => changeRoute("/")}
+              onClick={() => changeRouteOne("/", 0, props)}
               src={
                 props.history.location.pathname === "/" ||
                 props.history.location.pathname === "/designer"
@@ -134,14 +127,23 @@ const Navbar = (props) => {
               : "bluemenuItems"
           }
         >
-          <li className="link" onClick={() => changeRoute("/about")}>
+          <li
+            className="link"
+            onClick={() => changeRouteOne("/about", 0, props)}
+          >
             ABOUT
           </li>
-          <li className="link" onClick={() => changeRoute("/designer")}>
+          <li
+            className="link"
+            onClick={() => changeRouteOne("/designer", 0, props)}
+          >
             DESIGNER
           </li>
           <li className="link">
-            <Link to="/developer" onClick={() => changeRoute("/developer")}>
+            <Link
+              to="/developer"
+              onClick={() => changeRouteOne("/developer", 0, props)}
+            >
               DEVELOPER
             </Link>
           </li>
