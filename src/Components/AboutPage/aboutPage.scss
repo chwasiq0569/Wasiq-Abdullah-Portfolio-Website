@@ -177,8 +177,9 @@ $secondary_Yellow_Color: #fff55a;
           height: 100%;
           display: flex;
           align-items: center;
-          .brandsName__Container {
-            width: 40%;
+          .brandsName__Container,
+          .brandsName__Container3DH {
+            width: 33%;
             h1 {
               text-align: center;
               font-family: "MyFont", sans-serif;
@@ -187,9 +188,13 @@ $secondary_Yellow_Color: #fff55a;
               color: $white_Color;
             }
           }
-          .brandsImg__Container,
+          .brandsName__Container3DH {
+            h1 {
+              text-align: left;
+            }
+          }
           .brandsImg2__Container {
-            width: 55%;
+            width: 33%;
             img {
               width: 50%;
               height: 50%;

@@ -10,11 +10,12 @@ const WorkedWithComp = () => {
       </div>
       <div className="brandsLogos">
         <div
-          className="brandsImg__Container"
+          className="brandsName__Container3DH"
           data-aos="zoom-in"
           data-aos-delay="300"
         >
-          <img src={ICoordinateLogo} alt="ICoordinateLogo" />
+          <h1>360 DEGREE HUB</h1>
+          {/* <img src={ICoordinateLogo} alt="ICoordinateLogo" /> */}
         </div>
         <div
           className="brandsName__Container"
