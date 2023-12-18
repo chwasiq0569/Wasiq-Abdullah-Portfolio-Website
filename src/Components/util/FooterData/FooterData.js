@@ -27,7 +27,7 @@ export const data = [
     SVGComponent: Github,
   },
   {
-    href: "https://www.linkedin.com/in/wasiq-abdullah-b515031a6/",
+    href: "https://www.linkedin.com/in/wasiq-abdullah/",
     height: "1rem",
     width: "1rem",
 
